@@ -1,0 +1,1300 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A short description of my project">
+      
+      
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/react/">
+      
+      
+        <meta name="author" content="Venngage">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>React - Venngage Styleguides</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Javascript
+                </span>
+              
+            
+            React
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    Venngage Styleguides
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Javascript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../javascript/" title="JS Styleguide" class="md-nav__link">
+        JS Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        React
+      </label>
+    
+    <a href="./" title="React" class="md-nav__link md-nav__link--active">
+      React
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" title="Table of Contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-rules" title="Basic Rules" class="md-nav__link">
+    Basic Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-vs-reactcreateclass-vs-stateless" title="Class vs React.createClass vs stateless" class="md-nav__link">
+    Class vs React.createClass vs stateless
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" title="Alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotes" title="Quotes" class="md-nav__link">
+    Quotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacing" title="Spacing" class="md-nav__link">
+    Spacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props" title="Props" class="md-nav__link">
+    Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refs" title="Refs" class="md-nav__link">
+    Refs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parentheses" title="Parentheses" class="md-nav__link">
+    Parentheses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" title="Tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" title="Methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering" title="Ordering" class="md-nav__link">
+    Ordering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismounted" title="isMounted" class="md-nav__link">
+    isMounted
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../css-js/" title="CSS in Javascript" class="md-nav__link">
+        CSS in Javascript
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php/" title="PHP Styleguide" class="md-nav__link">
+        PHP Styleguide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="License" class="md-nav__link">
+        License
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" title="Table of Contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-rules" title="Basic Rules" class="md-nav__link">
+    Basic Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class-vs-reactcreateclass-vs-stateless" title="Class vs React.createClass vs stateless" class="md-nav__link">
+    Class vs React.createClass vs stateless
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaration" title="Declaration" class="md-nav__link">
+    Declaration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alignment" title="Alignment" class="md-nav__link">
+    Alignment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotes" title="Quotes" class="md-nav__link">
+    Quotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spacing" title="Spacing" class="md-nav__link">
+    Spacing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#props" title="Props" class="md-nav__link">
+    Props
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refs" title="Refs" class="md-nav__link">
+    Refs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parentheses" title="Parentheses" class="md-nav__link">
+    Parentheses
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tags" title="Tags" class="md-nav__link">
+    Tags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#methods" title="Methods" class="md-nav__link">
+    Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering" title="Ordering" class="md-nav__link">
+    Ordering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ismounted" title="isMounted" class="md-nav__link">
+    isMounted
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/js/react.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="venngage-reactjsx-style-guide">Venngage React/JSX Style Guide</h1>
+<p><em>A mostly reasonable approach to React and JSX</em></p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#basic-rules">Basic Rules</a></li>
+<li><a href="#class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</a></li>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#declaration">Declaration</a></li>
+<li><a href="#alignment">Alignment</a></li>
+<li><a href="#quotes">Quotes</a></li>
+<li><a href="#spacing">Spacing</a></li>
+<li><a href="#props">Props</a></li>
+<li><a href="#refs">Refs</a></li>
+<li><a href="#parentheses">Parentheses</a></li>
+<li><a href="#tags">Tags</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#ordering">Ordering</a></li>
+<li><a href="#ismounted"><code>isMounted</code></a></li>
+</ol>
+<h2 id="basic-rules">Basic Rules</h2>
+<ul>
+<li>Only include one React component per file.</li>
+<li>However, multiple <a href="https://facebook.github.io/react/docs/reusable-components.html#stateless-functions">Stateless, or Pure, Components</a> are allowed per file. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless"><code>react/no-multi-comp</code></a>.</li>
+<li>Always use JSX syntax.</li>
+<li>Do not use <code>React.createElement</code> unless you're initializing the app from a file that is not JSX.</li>
+</ul>
+<h2 id="class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</h2>
+<ul>
+<li>If you have internal state and/or refs, prefer <code>class extends React.Component</code> over <code>React.createClass</code> unless you have a very good reason to use mixins. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md"><code>react/prefer-es6-class</code></a> <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md"><code>react/prefer-stateless-function</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+const Listing = React.createClass({
+  // ...
+  render() {
+    return &lt;div&gt;{this.state.hello}&lt;/div&gt;;
+  }
+});
+
+// good
+class Listing extends React.Component {
+  // ...
+  render() {
+    return &lt;div&gt;{this.state.hello}&lt;/div&gt;;
+  }
+}
+</pre></div>
+
+
+<p>And if you don't have state or refs, prefer normal functions (not arrow functions) over classes:</p>
+<div class="codehilite"><pre><span></span>// bad
+class Listing extends React.Component {
+  render() {
+    return &lt;div&gt;{this.props.hello}&lt;/div&gt;;
+  }
+}
+
+// bad (relying on function name inference is discouraged)
+const Listing = ({ hello }) =&gt; (
+  &lt;div&gt;{hello}&lt;/div&gt;
+);
+
+// good
+function Listing({ hello }) {
+  return &lt;div&gt;{hello}&lt;/div&gt;;
+}
+</pre></div>
+
+
+<h2 id="naming">Naming</h2>
+<ul>
+<li><strong>Extensions</strong>: Use <code>.jsx</code> extension for React components.</li>
+<li><strong>Filename</strong>: Use PascalCase for filenames. E.g., <code>ReservationCard.jsx</code>.</li>
+<li><strong>Reference Naming</strong>: Use PascalCase for React components and camelCase for their instances. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md"><code>react/jsx-pascal-case</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+import reservationCard from &#39;./ReservationCard&#39;;
+
+// good
+import ReservationCard from &#39;./ReservationCard&#39;;
+
+// bad
+const ReservationItem = &lt;ReservationCard /&gt;;
+
+// good
+const reservationItem = &lt;ReservationCard /&gt;;
+</pre></div>
+
+
+<ul>
+<li><strong>Component Naming</strong>: Use the filename as the component name. For example, <code>ReservationCard.jsx</code> should have a reference name of <code>ReservationCard</code>. However, for root components of a directory, use <code>index.jsx</code> as the filename and use the directory name as the component name:</li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+import Footer from &#39;./Footer/Footer&#39;;
+
+// bad
+import Footer from &#39;./Footer/index&#39;;
+
+// good
+import Footer from &#39;./Footer&#39;;
+</pre></div>
+
+
+<ul>
+<li><strong>Higher-order Component Naming</strong>: Use a composite of the higher-order component's name and the passed-in component's name as the <code>displayName</code> on the generated component. For example, the higher-order component <code>withFoo()</code>, when passed a component <code>Bar</code> should produce a component with a <code>displayName</code> of <code>withFoo(Bar)</code>.</li>
+</ul>
+<blockquote>
+<p>Why? A component's <code>displayName</code> may be used by developer tools or in error messages, and having a value that clearly expresses this relationship helps people understand what is happening.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+export default function withFoo(WrappedComponent) {
+  return function WithFoo(props) {
+    return &lt;WrappedComponent {...props} foo /&gt;;
+  }
+}
+
+// good
+export default function withFoo(WrappedComponent) {
+  function WithFoo(props) {
+    return &lt;WrappedComponent {...props} foo /&gt;;
+  }
+
+  const wrappedComponentName = WrappedComponent.displayName
+    || WrappedComponent.name
+    || &#39;Component&#39;;
+
+  WithFoo.displayName = `withFoo(${wrappedComponentName})`;
+  return WithFoo;
+}
+</pre></div>
+
+
+<ul>
+<li><strong>Props Naming</strong>: Avoid using DOM component prop names for different purposes.</li>
+</ul>
+<blockquote>
+<p>Why? People expect props like <code>style</code> and <code>className</code> to mean one specific thing. Varying this API for a subset of your app makes the code less readable and less maintainable, and may cause bugs.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+&lt;MyComponent style=&quot;fancy&quot; /&gt;
+
+// good
+&lt;MyComponent variant=&quot;fancy&quot; /&gt;
+</pre></div>
+
+
+<h2 id="declaration">Declaration</h2>
+<ul>
+<li>Do not use <code>displayName</code> for naming components. Instead, name the component by reference.</li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+export default React.createClass({
+  displayName: &#39;ReservationCard&#39;,
+  // stuff goes here
+});
+
+// good
+export default class ReservationCard extends React.Component {
+}
+</pre></div>
+
+
+<h2 id="alignment">Alignment</h2>
+<ul>
+<li>Follow these alignment styles for JSX syntax. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md"><code>react/jsx-closing-bracket-location</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo superLongParam=&quot;bar&quot;
+     anotherSuperLongParam=&quot;baz&quot; /&gt;
+
+// good
+&lt;Foo
+  superLongParam=&quot;bar&quot;
+  anotherSuperLongParam=&quot;baz&quot;
+/&gt;
+
+// if props fit in one line then keep it on the same line
+&lt;Foo bar=&quot;bar&quot; /&gt;
+
+// children get indented normally
+&lt;Foo
+  superLongParam=&quot;bar&quot;
+  anotherSuperLongParam=&quot;baz&quot;
+&gt;
+  &lt;Quux /&gt;
+&lt;/Foo&gt;
+</pre></div>
+
+
+<h2 id="quotes">Quotes</h2>
+<ul>
+<li>Always use double quotes (<code>"</code>) for JSX attributes, but single quotes (<code>'</code>) for all other JS. eslint: <a href="http://eslint.org/docs/rules/jsx-quotes"><code>jsx-quotes</code></a></li>
+</ul>
+<blockquote>
+<p>Why? Regular HTML attributes also typically use double quotes instead of single, so JSX attributes mirror this convention.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo bar=&#39;bar&#39; /&gt;
+
+// good
+&lt;Foo bar=&quot;bar&quot; /&gt;
+
+// bad
+&lt;Foo style={{ left: &quot;20px&quot; }} /&gt;
+
+// good
+&lt;Foo style={{ left: &#39;20px&#39; }} /&gt;
+</pre></div>
+
+
+<h2 id="spacing">Spacing</h2>
+<ul>
+<li>Always include a single space in your self-closing tag. eslint: <a href="http://eslint.org/docs/rules/no-multi-spaces"><code>no-multi-spaces</code></a>, <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md"><code>react/jsx-space-before-closing</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo/&gt;
+
+// very bad
+&lt;Foo                 /&gt;
+
+// bad
+&lt;Foo
+ /&gt;
+
+// good
+&lt;Foo /&gt;
+</pre></div>
+
+
+<ul>
+<li>Do not pad JSX curly braces with spaces. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md"><code>react/jsx-curly-spacing</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo bar={ baz } /&gt;
+
+// good
+&lt;Foo bar={baz} /&gt;
+</pre></div>
+
+
+<h2 id="props">Props</h2>
+<ul>
+<li>Always use camelCase for prop names.</li>
+</ul>
+<div class="codehilite"><pre><span></span>  // bad
+  &lt;Foo
+    UserName=&quot;hello&quot;
+    phone_number={12345678}
+  /&gt;
+
+  // good
+  &lt;Foo
+    userName=&quot;hello&quot;
+    phoneNumber={12345678}
+  /&gt;
+</pre></div>
+
+
+<ul>
+<li>Omit the value of the prop when it is explicitly <code>true</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md"><code>react/jsx-boolean-value</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>  // bad
+  &lt;Foo
+    hidden={true}
+  /&gt;
+
+  // good
+  &lt;Foo
+    hidden
+  /&gt;
+</pre></div>
+
+
+<ul>
+<li>Always include an <code>alt</code> prop on <code>&lt;img&gt;</code> tags. If the image is presentational, <code>alt</code> can be an empty string or the <code>&lt;img&gt;</code> must have <code>role="presentation"</code>. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md"><code>jsx-a11y/img-has-alt</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;img src=&quot;hello.jpg&quot; /&gt;
+
+// good
+&lt;img src=&quot;hello.jpg&quot; alt=&quot;Me waving hello&quot; /&gt;
+
+// good
+&lt;img src=&quot;hello.jpg&quot; alt=&quot;&quot; /&gt;
+
+// good
+&lt;img src=&quot;hello.jpg&quot; role=&quot;presentation&quot; /&gt;
+</pre></div>
+
+
+<ul>
+<li>Do not use words like "image", "photo", or "picture" in <code>&lt;img&gt;</code> <code>alt</code> props. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md"><code>jsx-a11y/img-redundant-alt</code></a></li>
+</ul>
+<blockquote>
+<p>Why? Screenreaders already announce <code>img</code> elements as images, so there is no need to include this information in the alt text.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+&lt;img src=&quot;hello.jpg&quot; alt=&quot;Picture of me waving hello&quot; /&gt;
+
+// good
+&lt;img src=&quot;hello.jpg&quot; alt=&quot;Me waving hello&quot; /&gt;
+</pre></div>
+
+
+<ul>
+<li>Use only valid, non-abstract <a href="https://www.w3.org/TR/wai-aria/roles#role_definitions">ARIA roles</a>. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md"><code>jsx-a11y/aria-role</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad - not an ARIA role
+&lt;div role=&quot;datepicker&quot; /&gt;
+
+// bad - abstract ARIA role
+&lt;div role=&quot;range&quot; /&gt;
+
+// good
+&lt;div role=&quot;button&quot; /&gt;
+</pre></div>
+
+
+<ul>
+<li>Do not use <code>accessKey</code> on elements. eslint: <a href="https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/no-access-key.md"><code>jsx-a11y/no-access-key</code></a></li>
+</ul>
+<blockquote>
+<p>Why? Inconsistencies between keyboard shortcuts and keyboard commands used by people using screenreaders and keyboards complicate accessibility.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+&lt;div accessKey=&quot;h&quot; /&gt;
+
+// good
+&lt;div /&gt;
+</pre></div>
+
+
+<ul>
+<li>Avoid using an array index as <code>key</code> prop, prefer a unique ID. (<a href="https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318">why?</a>)</li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+{todos.map((todo, index) =&gt;
+&lt;Todo
+  {...todo}
+  key={index}
+/&gt;
+)}
+
+// good
+{todos.map(todo =&gt; (
+&lt;Todo
+  {...todo}
+  key={todo.id}
+/&gt;
+))}
+</pre></div>
+
+
+<ul>
+<li>Always define explicit defaultProps for all non-required props.</li>
+</ul>
+<blockquote>
+<p>Why? propTypes are a form of documentation, and providing defaultProps means the reader of your code doesn’t have to assume as much. In addition, it can mean that your code can omit certain type checks.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+function SFC({ foo, bar, children }) {
+return &lt;div&gt;{foo}{bar}{children}&lt;/div&gt;;
+}
+SFC.propTypes = {
+foo: PropTypes.number.isRequired,
+bar: PropTypes.string,
+children: PropTypes.node,
+};
+
+// good
+function SFC({ foo, bar }) {
+return &lt;div&gt;{foo}{bar}&lt;/div&gt;;
+}
+SFC.propTypes = {
+foo: PropTypes.number.isRequired,
+bar: PropTypes.string,
+children: PropTypes.node,
+};
+SFC.defaultProps = {
+bar: &#39;&#39;,
+children: null,
+};
+</pre></div>
+
+
+<h2 id="refs">Refs</h2>
+<ul>
+<li>Always use ref callbacks. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md"><code>react/no-string-refs</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo
+  ref=&quot;myRef&quot;
+/&gt;
+
+// good
+&lt;Foo
+  ref={(ref) =&gt; { this.myRef = ref; }}
+/&gt;
+</pre></div>
+
+
+<h2 id="parentheses">Parentheses</h2>
+<ul>
+<li>Wrap JSX tags in parentheses when they span more than one line. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md"><code>react/wrap-multilines</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+render() {
+  return &lt;MyComponent className=&quot;long body&quot; foo=&quot;bar&quot;&gt;
+           &lt;MyChild /&gt;
+         &lt;/MyComponent&gt;;
+}
+
+// good
+render() {
+  return (
+    &lt;MyComponent className=&quot;long body&quot; foo=&quot;bar&quot;&gt;
+      &lt;MyChild /&gt;
+    &lt;/MyComponent&gt;
+  );
+}
+
+// good, when single line
+render() {
+  const body = &lt;div&gt;hello&lt;/div&gt;;
+  return &lt;MyComponent&gt;{body}&lt;/MyComponent&gt;;
+}
+</pre></div>
+
+
+<h2 id="tags">Tags</h2>
+<ul>
+<li>Always self-close tags that have no children. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md"><code>react/self-closing-comp</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo className=&quot;stuff&quot;&gt;&lt;/Foo&gt;
+
+// good
+&lt;Foo className=&quot;stuff&quot; /&gt;
+</pre></div>
+
+
+<ul>
+<li>If your component has multi-line properties, close its tag on a new line. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md"><code>react/jsx-closing-bracket-location</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+&lt;Foo
+  bar=&quot;bar&quot;
+  baz=&quot;baz&quot; /&gt;
+
+// good
+&lt;Foo
+  bar=&quot;bar&quot;
+  baz=&quot;baz&quot;
+/&gt;
+</pre></div>
+
+
+<h2 id="methods">Methods</h2>
+<ul>
+<li>Use arrow functions to close over local variables.</li>
+</ul>
+<div class="codehilite"><pre><span></span>function ItemList(props) {
+  return (
+    &lt;ul&gt;
+      {props.items.map((item, index) =&gt; (
+        &lt;Item
+          key={item.key}
+          onClick={() =&gt; doSomethingWith(item.name, index)}
+        /&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</pre></div>
+
+
+<ul>
+<li>Bind event handlers for the render method in the constructor. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md"><code>react/jsx-no-bind</code></a></li>
+</ul>
+<blockquote>
+<p>Why? A bind call in the render path creates a brand new function on every single render.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+class extends React.Component {
+  onClickDiv() {
+    // do stuff
+  }
+
+  render() {
+    return &lt;div onClick={this.onClickDiv.bind(this)} /&gt;
+  }
+}
+
+// good
+class extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onClickDiv = this.onClickDiv.bind(this);
+  }
+
+  onClickDiv() {
+    // do stuff
+  }
+
+  render() {
+    return &lt;div onClick={this.onClickDiv} /&gt;
+  }
+}
+</pre></div>
+
+
+<ul>
+<li>Do not use underscore prefix for internal methods of a React component.<blockquote>
+<p>Why? Underscore prefixes are sometimes used as a convention in other languages to denote privacy. But, unlike those languages, there is no native support for privacy in JavaScript, everything is public. Regardless of your intentions, adding underscore prefixes to your properties does not actually make them private, and any property (underscore-prefixed or not) should be treated as being public. See issues <a href="https://github.com/airbnb/javascript/issues/1024">#1024</a>, and <a href="https://github.com/airbnb/javascript/issues/490">#490</a> for a more in-depth discussion.</p>
+</blockquote>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+React.createClass({
+  _onClickSubmit() {
+    // do stuff
+  },
+
+  // other stuff
+});
+
+// good
+class extends React.Component {
+  onClickSubmit() {
+    // do stuff
+  }
+
+  // other stuff
+}
+</pre></div>
+
+
+<ul>
+<li>Be sure to return a value in your <code>render</code> methods. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md"><code>react/require-render-return</code></a></li>
+</ul>
+<div class="codehilite"><pre><span></span>// bad
+render() {
+  (&lt;div /&gt;);
+}
+
+// good
+render() {
+  return (&lt;div /&gt;);
+}
+</pre></div>
+
+
+<h2 id="ordering">Ordering</h2>
+<hr />
+<p><strong>Ordering for <code>class extends React.Component</code>:</strong></p>
+<ol>
+<li>optional <code>static</code> methods</li>
+<li><code>constructor</code></li>
+<li><code>getChildContext</code></li>
+<li><code>componentWillMount</code></li>
+<li><code>componentDidMount</code></li>
+<li><code>componentWillReceiveProps</code></li>
+<li><code>shouldComponentUpdate</code></li>
+<li><code>componentWillUpdate</code></li>
+<li><code>componentDidUpdate</code></li>
+<li><code>componentWillUnmount</code></li>
+<li><em>clickHandlers or eventHandlers</em> like <code>onClickSubmit()</code> or <code>onChangeDescription()</code></li>
+<li><em>getter methods for <code>render</code></em> like <code>getSelectReason()</code> or <code>getFooterContent()</code></li>
+<li><em>optional render methods</em> like <code>renderNavigation()</code> or <code>renderProfilePicture()</code></li>
+<li>
+<p><code>render</code></p>
+</li>
+<li>
+<p>How to define <code>propTypes</code>, <code>defaultProps</code>, <code>contextTypes</code>, etc...</p>
+</li>
+</ol>
+<div class="codehilite"><pre><span></span>import React, { PropTypes } from &#39;react&#39;;
+
+const propTypes = {
+  id: PropTypes.number.isRequired,
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string,
+};
+
+const defaultProps = {
+  text: &#39;Hello World&#39;,
+};
+
+class Link extends React.Component {
+  static methodsAreOk() {
+    return true;
+  }
+
+  render() {
+    return &lt;a href={this.props.url} data-id={this.props.id}&gt;{this.props.text}&lt;/a&gt;
+  }
+}
+
+Link.propTypes = propTypes;
+Link.defaultProps = defaultProps;
+
+export default Link;
+</pre></div>
+
+
+<p><strong>Ordering for <code>React.createClass</code>: eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md"><code>react/sort-comp</code></a></strong></p>
+<ol>
+<li><code>displayName</code></li>
+<li><code>propTypes</code></li>
+<li><code>contextTypes</code></li>
+<li><code>childContextTypes</code></li>
+<li><code>mixins</code></li>
+<li><code>statics</code></li>
+<li><code>defaultProps</code></li>
+<li><code>getDefaultProps</code></li>
+<li><code>getInitialState</code></li>
+<li><code>getChildContext</code></li>
+<li><code>componentWillMount</code></li>
+<li><code>componentDidMount</code></li>
+<li><code>componentWillReceiveProps</code></li>
+<li><code>shouldComponentUpdate</code></li>
+<li><code>componentWillUpdate</code></li>
+<li><code>componentDidUpdate</code></li>
+<li><code>componentWillUnmount</code></li>
+<li><em>clickHandlers or eventHandlers</em> like <code>onClickSubmit()</code> or <code>onChangeDescription()</code></li>
+<li><em>getter methods for <code>render</code></em> like <code>getSelectReason()</code> or <code>getFooterContent()</code></li>
+<li><em>optional render methods</em> like <code>renderNavigation()</code> or <code>renderProfilePicture()</code></li>
+<li><code>render</code></li>
+</ol>
+<h2 id="ismounted"><code>isMounted</code></h2>
+<ul>
+<li>Do not use <code>isMounted</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md"><code>react/no-is-mounted</code></a></li>
+</ul>
+<blockquote>
+<p>Why? <a href="https://facebook.github.io/react/blog/2015/12/16/ismounted-antipattern.html"><code>isMounted</code> is an anti-pattern</a>, is not available when using ES6 classes, and is on its way to being officially deprecated.</p>
+</blockquote>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../javascript/" title="JS Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JS Styleguide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../css-js/" title="CSS in Javascript" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                CSS in Javascript
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Venngage
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

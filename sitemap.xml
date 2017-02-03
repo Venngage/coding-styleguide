@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/js/javascript/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/js/react/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/js/css-js/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/php/php/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide/about/license/</loc>
+     <lastmod>2017-02-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

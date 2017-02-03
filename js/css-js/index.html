@@ -1,0 +1,975 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A short description of my project">
+      
+      
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/css-js/">
+      
+      
+        <meta name="author" content="Venngage">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>CSS in Javascript - Venngage Styleguides</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Javascript
+                </span>
+              
+            
+            CSS in Javascript
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-icon md-icon--home  md-nav__button">
+      
+    </i>
+    Venngage Styleguides
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Javascript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../javascript/" title="JS Styleguide" class="md-nav__link">
+        JS Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../react/" title="React" class="md-nav__link">
+        React
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        CSS in Javascript
+      </label>
+    
+    <a href="./" title="CSS in Javascript" class="md-nav__link md-nav__link--active">
+      CSS in Javascript
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering" title="Ordering" class="md-nav__link">
+    Ordering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting" title="Nesting" class="md-nav__link">
+    Nesting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline" title="Inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" title="Themes" class="md-nav__link">
+    Themes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php/" title="PHP Styleguide" class="md-nav__link">
+        PHP Styleguide
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      About
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-4">
+        About
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="License" class="md-nav__link">
+        License
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#naming" title="Naming" class="md-nav__link">
+    Naming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering" title="Ordering" class="md-nav__link">
+    Ordering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting" title="Nesting" class="md-nav__link">
+    Nesting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline" title="Inline" class="md-nav__link">
+    Inline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#themes" title="Themes" class="md-nav__link">
+    Themes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/js/css-js.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="venngage-css-in-javascript-style-guide">Venngage CSS-in-JavaScript Style Guide</h1>
+<ol>
+<li><a href="#naming">Naming</a></li>
+<li><a href="#ordering">Ordering</a></li>
+<li><a href="#nesting">Nesting</a></li>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#themes">Themes</a></li>
+</ol>
+<h2 id="naming">Naming</h2>
+<ul>
+<li>Use camelCase for object keys (i.e. "selectors").</li>
+</ul>
+<blockquote>
+<p>Why? We access these keys as properties on the <code>styles</code> object in the component, so it is most convenient to use camelCase.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="p">{</span>
+  <span class="s1">&#39;bermuda-triangle&#39;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="p">{</span>
+  <span class="nx">bermudaTriangle</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Use an underscore for modifiers to other styles.</li>
+</ul>
+<blockquote>
+<p>Why? Similar to BEM, this naming convention makes it clear that the styles are intended to modify the element preceded by the underscore. Underscores do not need to be quoted, so they are preferred over other characters, such as dashes.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="p">{</span>
+  <span class="nx">bruceBanner</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span>
+    <span class="nx">transition</span><span class="o">:</span> <span class="s1">&#39;color 10s&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">bruceBannerTheHulk</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="p">{</span>
+  <span class="nx">bruceBanner</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;pink&#39;</span><span class="p">,</span>
+    <span class="nx">transition</span><span class="o">:</span> <span class="s1">&#39;color 10s&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">bruceBanner_theHulk</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Use <code>selectorName_fallback</code> for sets of fallback styles.</li>
+</ul>
+<blockquote>
+<p>Why? Similar to modifiers, keeping the naming consistent helps reveal the relationship of these styles to the styles that override them in more adequate browsers.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="p">{</span>
+  <span class="nx">muscles</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">muscles_sadBears</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="p">{</span>
+  <span class="nx">muscles</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">muscles_fallback</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Use a separate selector for sets of fallback styles.</li>
+</ul>
+<blockquote>
+<p>Why? Keeping fallback styles contained in a separate object clarifies their purpose, which improves readability.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="p">{</span>
+  <span class="nx">muscles</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">left</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">flexGrow</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">right</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="p">{</span>
+  <span class="nx">muscles</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">left</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">flexGrow</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">left_fallback</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="nx">right_fallback</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Use device-agnostic names (e.g. "small", "medium", and "large") to name media query breakpoints.</li>
+</ul>
+<blockquote>
+<p>Why? Commonly used names like "phone", "tablet", and "desktop" do not match the characteristics of the devices in the real world. Using these names sets the wrong expectations.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">const</span> <span class="nx">breakpoints</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">mobile</span><span class="o">:</span> <span class="s1">&#39;@media (max-width: 639px)&#39;</span><span class="p">,</span>
+  <span class="nx">tablet</span><span class="o">:</span> <span class="s1">&#39;@media (max-width: 1047px)&#39;</span><span class="p">,</span>
+  <span class="nx">desktop</span><span class="o">:</span> <span class="s1">&#39;@media (min-width: 1048px)&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="c1">// good</span>
+<span class="kr">const</span> <span class="nx">breakpoints</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">small</span><span class="o">:</span> <span class="s1">&#39;@media (max-width: 639px)&#39;</span><span class="p">,</span>
+  <span class="nx">medium</span><span class="o">:</span> <span class="s1">&#39;@media (max-width: 1047px)&#39;</span><span class="p">,</span>
+  <span class="nx">large</span><span class="o">:</span> <span class="s1">&#39;@media (min-width: 1048px)&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+
+
+<h2 id="ordering">Ordering</h2>
+<ul>
+<li>Define styles after the component.</li>
+</ul>
+<blockquote>
+<p>Why? We use a higher-order component to theme our styles, which is naturally used after the component definition. Passing the styles object directly to this function reduces indirection.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+const styles = {
+  container: {
+    display: &#39;inline-block&#39;,
+  },
+};
+
+function MyComponent({ styles }) {
+  return (
+    &lt;div {...css(styles.container)}&gt;
+      Never doubt that a small group of thoughtful, committed citizens can
+      change the world. Indeed, it’s the only thing that ever has.
+    &lt;/div&gt;
+  );
+}
+
+export default withStyles(() =&gt; styles)(MyComponent);
+
+
+// good
+function MyComponent({ styles }) {
+  return (
+    &lt;div {...css(styles.container)}&gt;
+      Never doubt that a small group of thoughtful, committed citizens can
+      change the world. Indeed, it’s the only thing that ever has.
+    &lt;/div&gt;
+  );
+}
+
+export default withStyles(() =&gt; ({
+  container: {
+    display: &#39;inline-block&#39;,
+  },
+}))(MyComponent);
+</pre></div>
+
+
+<h2 id="nesting">Nesting</h2>
+<ul>
+<li>Leave a blank line between adjacent blocks at the same indentation level.</li>
+</ul>
+<blockquote>
+<p>Why? The whitespace improves readability and reduces the likelihood of merge conflicts.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="p">{</span>
+  <span class="nx">bigBang</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;::before&#39;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;&#39;&#39;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+  <span class="nx">universe</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">border</span><span class="o">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="c1">// good</span>
+<span class="p">{</span>
+  <span class="nx">bigBang</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;inline-block&#39;</span><span class="p">,</span>
+
+    <span class="s1">&#39;::before&#39;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">content</span><span class="o">:</span> <span class="s2">&quot;&#39;&#39;&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+
+  <span class="nx">universe</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">border</span><span class="o">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="inline">Inline</h2>
+<ul>
+<li>Use inline styles for styles that have a high cardinality (e.g. uses the value of a prop) and not for styles that have a low cardinality.</li>
+</ul>
+<blockquote>
+<p>Why? Generating themed stylesheets can be expensive, so they are best for discrete sets of styles.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span>// bad
+export default function MyComponent({ spacing }) {
+  return (
+    &lt;div style={{ display: &#39;table&#39;, margin: spacing }} /&gt;
+  );
+}
+
+// good
+function MyComponent({ styles, spacing }) {
+  return (
+    &lt;div {...css(styles.periodic, { margin: spacing })} /&gt;
+  );
+}
+export default withStyles(() =&gt; ({
+  periodic: {
+    display: &#39;table&#39;,
+  },
+}))(MyComponent);
+</pre></div>
+
+
+<h2 id="themes">Themes</h2>
+<ul>
+<li>Use an abstraction layer such as <a href="https://github.com/airbnb/react-with-styles">react-with-styles</a> that enables theming. <em>react-with-styles gives us things like <code>withStyles()</code>, <code>ThemedStyleSheet</code>, and <code>css()</code> which are used in some of the examples in this document.</em></li>
+</ul>
+<blockquote>
+<p>Why? It is useful to have a set of shared variables for styling your components. Using an abstraction layer makes this more convenient. Additionally, this can help prevent your components from being tightly coupled to any particular underlying implementation, which gives you more freedom.</p>
+</blockquote>
+<ul>
+<li>Define colors only in themes.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">chuckNorris</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#bada55&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">color</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">chuckNorris</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="nx">color</span><span class="p">.</span><span class="nx">badass</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Define fonts only in themes.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">towerOfPisa</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">fontStyle</span><span class="o">:</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">font</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">towerOfPisa</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">fontStyle</span><span class="o">:</span> <span class="nx">font</span><span class="p">.</span><span class="nx">italic</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Define fonts as sets of related styles.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">towerOfPisa</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">fontFamily</span><span class="o">:</span> <span class="s1">&#39;Italiana, &quot;Times New Roman&quot;, serif&#39;</span><span class="p">,</span>
+    <span class="nx">fontSize</span><span class="o">:</span> <span class="s1">&#39;2em&#39;</span><span class="p">,</span>
+    <span class="nx">fontStyle</span><span class="o">:</span> <span class="s1">&#39;italic&#39;</span><span class="p">,</span>
+    <span class="nx">lineHeight</span><span class="o">:</span> <span class="mf">1.5</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">font</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">towerOfPisa</span><span class="o">:</span> <span class="p">{</span>
+    <span class="p">...</span><span class="nx">font</span><span class="p">.</span><span class="nx">italian</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Define base grid units in theme (either as a value or a function that takes a multiplier).</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">rip</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">bottom</span><span class="o">:</span> <span class="s1">&#39;-6912px&#39;</span><span class="p">,</span> <span class="c1">// 6 feet</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">units</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">rip</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">bottom</span><span class="o">:</span> <span class="nx">units</span><span class="p">(</span><span class="mi">864</span><span class="p">),</span> <span class="c1">// 6 feet, assuming our unit is 8px</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">unit</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">rip</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">bottom</span><span class="o">:</span> <span class="mi">864</span> <span class="o">*</span> <span class="nx">unit</span><span class="p">,</span> <span class="c1">// 6 feet, assuming our unit is 8px</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Define media queries only in themes.</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
+
+    <span class="s1">&#39;@media (max-width: 1047px)&#39;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;50%&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">breakpoint</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">container</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;100%&#39;</span><span class="p">,</span>
+
+    <span class="p">[</span><span class="nx">breakpoint</span><span class="p">.</span><span class="nx">medium</span><span class="p">]</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="s1">&#39;50%&#39;</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>Define tricky fallback properties in themes.</li>
+</ul>
+<blockquote>
+<p>Why? Many CSS-in-JavaScript implementations merge style objects together which makes specifying fallbacks for the same property (e.g. <code>display</code>) a little tricky. To keep the approach unified, put these fallbacks in the theme.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="p">.</span><span class="nx">muscles</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="p">.</span><span class="nx">muscles_fallback</span> <span class="p">{</span>
+    <span class="s1">&#39;display &#39;</span><span class="o">:</span> <span class="s1">&#39;table&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">fallbacks</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="p">.</span><span class="nx">muscles</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="p">.</span><span class="nx">muscles_fallback</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nx">fallbacks</span><span class="p">.</span><span class="nx">display</span><span class="p">]</span><span class="o">:</span> <span class="s1">&#39;table&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+
+<span class="c1">// good</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">withStyles</span><span class="p">(({</span> <span class="nx">fallback</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="p">.</span><span class="nx">muscles</span> <span class="p">{</span>
+    <span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+
+  <span class="p">.</span><span class="nx">muscles_fallback</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nx">fallback</span><span class="p">(</span><span class="s1">&#39;display&#39;</span><span class="p">)]</span><span class="o">:</span> <span class="s1">&#39;table&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">}))(</span><span class="nx">MyComponent</span><span class="p">);</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p>Create as few custom themes as possible. Many applications may only have one theme.</p>
+</li>
+<li>
+<p>Namespace custom theme settings under a nested object with a unique and descriptive key.</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><span class="c1">// bad</span>
+<span class="nx">ThemedStyleSheet</span><span class="p">.</span><span class="nx">registerTheme</span><span class="p">(</span><span class="s1">&#39;mySection&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">mySectionPrimaryColor</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+<span class="p">});</span>
+
+<span class="c1">// good</span>
+<span class="nx">ThemedStyleSheet</span><span class="p">.</span><span class="nx">registerTheme</span><span class="p">(</span><span class="s1">&#39;mySection&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">mySection</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">primaryColor</span><span class="o">:</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<hr />
+<p>CSS puns adapted from <a href="http://saijogeorge.com/css-puns/">Saijo George</a>.</p>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../react/" title="React" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                React
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../php/php/" title="PHP Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                PHP Styleguide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Venngage
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
