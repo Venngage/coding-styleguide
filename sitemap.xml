@@ -3,8 +3,8 @@
 
     
     <url>
-     <loc>https://enicol.github.io/venngage-styleguide/</loc>
-     <lastmod>2017-02-03</lastmod>
+     <loc>https://enicol.github.io/venngage-styleguide//</loc>
+     <lastmod>2017-02-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,30 +12,20 @@
     
         
     <url>
-     <loc>https://enicol.github.io/venngage-styleguide/js/javascript/</loc>
-     <lastmod>2017-02-03</lastmod>
+     <loc>https://enicol.github.io/venngage-styleguide//js/javascript/</loc>
+     <lastmod>2017-02-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://enicol.github.io/venngage-styleguide/js/react/</loc>
-     <lastmod>2017-02-03</lastmod>
+     <loc>https://enicol.github.io/venngage-styleguide//js/react/</loc>
+     <lastmod>2017-02-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>https://enicol.github.io/venngage-styleguide/js/css-js/</loc>
-     <lastmod>2017-02-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>https://enicol.github.io/venngage-styleguide/php/php/</loc>
-     <lastmod>2017-02-03</lastmod>
+     <loc>https://enicol.github.io/venngage-styleguide//js/css-js/</loc>
+     <lastmod>2017-02-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -44,11 +34,49 @@
     
         
     <url>
-     <loc>https://enicol.github.io/venngage-styleguide/about/license/</loc>
-     <lastmod>2017-02-03</lastmod>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-standard/</loc>
+     <lastmod>2017-02-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-styleguide/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-interface/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-autoloader/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-cache/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//php/php-http-messages/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>https://enicol.github.io/venngage-styleguide//about/license/</loc>
+     <lastmod>2017-02-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
     
 
 </urlset>

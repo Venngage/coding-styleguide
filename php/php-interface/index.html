@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
+      
+      
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php-interface/">
+      
+      
+        <meta name="author" content="Venngage">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Logger Interface - Venngage</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  PHP
+                </span>
+              
+            
+            Logger Interface
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
+      
+    </i>
+    Venngage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Javascript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/css-js/" title="CSS in Javascript" class="md-nav__link">
+        CSS in Javascript
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Logger Interface
+      </label>
+    
+    <a href="./" title="Logger Interface" class="md-nav__link md-nav__link--active">
+      Logger Interface
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-specification" title="1. Specification" class="md-nav__link">
+    1. Specification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-basics" title="1.1 Basics" class="md-nav__link">
+    1.1 Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-message" title="1.2 Message" class="md-nav__link">
+    1.2 Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-context" title="1.3 Context" class="md-nav__link">
+    1.3 Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-helper-classes-and-interfaces" title="1.4 Helper classes and interfaces" class="md-nav__link">
+    1.4 Helper classes and interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-package" title="2. Package" class="md-nav__link">
+    2. Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-psrlogloggerinterface" title="3. Psr\Log\LoggerInterface" class="md-nav__link">
+    3. Psr\Log\LoggerInterface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-psrlogloggerawareinterface" title="4. Psr\Log\LoggerAwareInterface" class="md-nav__link">
+    4. Psr\Log\LoggerAwareInterface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-psrlogloglevel" title="5. Psr\Log\LogLevel" class="md-nav__link">
+    5. Psr\Log\LogLevel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-specification" title="1. Specification" class="md-nav__link">
+    1. Specification
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-basics" title="1.1 Basics" class="md-nav__link">
+    1.1 Basics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-message" title="1.2 Message" class="md-nav__link">
+    1.2 Message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-context" title="1.3 Context" class="md-nav__link">
+    1.3 Context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-helper-classes-and-interfaces" title="1.4 Helper classes and interfaces" class="md-nav__link">
+    1.4 Helper classes and interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-package" title="2. Package" class="md-nav__link">
+    2. Package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-psrlogloggerinterface" title="3. Psr\Log\LoggerInterface" class="md-nav__link">
+    3. Psr\Log\LoggerInterface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-psrlogloggerawareinterface" title="4. Psr\Log\LoggerAwareInterface" class="md-nav__link">
+    4. Psr\Log\LoggerAwareInterface
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-psrlogloglevel" title="5. Psr\Log\LogLevel" class="md-nav__link">
+    5. Psr\Log\LogLevel
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/php/php-interface.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="logger-interface">Logger Interface<a class="headerlink" href="#logger-interface" title="Permanent link">&para;</a></h1>
+<p>This document describes a common interface for logging libraries.</p>
+<p>The main goal is to allow libraries to receive a <code>Psr\Log\LoggerInterface</code>
+object and write logs to it in a simple and universal way. Frameworks
+and CMSs that have custom needs MAY extend the interface for their own
+purpose, but SHOULD remain compatible with this document. This ensures
+that the third-party libraries an application uses can write to the
+centralized application logs.</p>
+<p>The word <code>implementor</code> in this document is to be interpreted as someone
+implementing the <code>LoggerInterface</code> in a log-related library or framework.
+Users of loggers are referred to as <code>user</code>.</p>
+<h2 id="1-specification">1. Specification<a class="headerlink" href="#1-specification" title="Permanent link">&para;</a></h2>
+<h3 id="11-basics">1.1 Basics<a class="headerlink" href="#11-basics" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The <code>LoggerInterface</code> exposes eight methods to write logs to the eight
+  <a href="http://tools.ietf.org/html/rfc5424">RFC 5424</a> levels (debug, info, notice, warning, error, critical, alert,
+  emergency).</p>
+</li>
+<li>
+<p>A ninth method, <code>log</code>, accepts a log level as the first argument. Calling this
+  method with one of the log level constants MUST have the same result as
+  calling the level-specific method. Calling this method with a level not
+  defined by this specification MUST throw a <code>Psr\Log\InvalidArgumentException</code>
+  if the implementation does not know about the level. Users SHOULD NOT use a
+  custom level without knowing for sure the current implementation supports it.</p>
+</li>
+</ul>
+<h3 id="12-message">1.2 Message<a class="headerlink" href="#12-message" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Every method accepts a string as the message, or an object with a
+  <code>__toString()</code> method. Implementors MAY have special handling for the passed
+  objects. If that is not the case, implementors MUST cast it to a string.</p>
+</li>
+<li>
+<p>The message MAY contain placeholders which implementors MAY replace with
+  values from the context array.</p>
+</li>
+</ul>
+<p>Placeholder names MUST correspond to keys in the context array.</p>
+<p>Placeholder names MUST be delimited with a single opening brace <code>{</code> and
+  a single closing brace <code>}</code>. There MUST NOT be any whitespace between the
+  delimiters and the placeholder name.</p>
+<p>Placeholder names SHOULD be composed only of the characters <code>A-Z</code>, <code>a-z</code>,
+  <code>0-9</code>, underscore <code>_</code>, and period <code>.</code>. The use of other characters is
+  reserved for future modifications of the placeholders specification.</p>
+<p>Implementors MAY use placeholders to implement various escaping strategies
+  and translate logs for display. Users SHOULD NOT pre-escape placeholder
+  values since they can not know in which context the data will be displayed.</p>
+<p>The following is an example implementation of placeholder interpolation
+  provided for reference purposes only:</p>
+<div class="codehilite"><pre><span></span><span class="x">/**</span>
+<span class="x">  * Interpolates context values into the message placeholders.</span>
+<span class="x">  */</span>
+
+<span class="x">function interpolate($message, array $context = array()) {</span>
+<span class="x">    // build a replacement array with braces around the context keys</span>
+<span class="x">    $replace = array();</span>
+<span class="x">    foreach ($context as $key =&gt; $val) {</span>
+<span class="x">        // check that the value can be casted to string</span>
+<span class="x">        if (!is_array($val) &amp;&amp; (!is_object($val) || method_exists($val, &#39;__toString&#39;))) {</span>
+<span class="x">            $replace[&#39;{&#39; . $key . &#39;}&#39;] = $val;</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+
+<span class="x">    // interpolate replacement values into the message and return</span>
+<span class="x">    return strtr($message, $replace);</span>
+<span class="x">}</span>
+
+<span class="x">// a message with brace-delimited placeholder names</span>
+<span class="x">$message = &quot;User {username} created&quot;;</span>
+
+<span class="x">// a context array of placeholder names =&gt; replacement values</span>
+<span class="x">$context = array(&#39;username&#39; =&gt; &#39;bolivar&#39;);</span>
+
+<span class="x">// echoes &quot;User bolivar created&quot;</span>
+<span class="x">echo interpolate($message, $context);</span>
+</pre></div>
+
+
+<h3 id="13-context">1.3 Context<a class="headerlink" href="#13-context" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Every method accepts an array as context data. This is meant to hold any
+  extraneous information that does not fit well in a string. The array can
+  contain anything. Implementors MUST ensure they treat context data with
+  as much lenience as possible. A given value in the context MUST NOT throw
+  an exception nor raise any php error, warning or notice.</p>
+</li>
+<li>
+<p>If an <code>Exception</code> object is passed in the context data, it MUST be in the
+  <code>'exception'</code> key. Logging exceptions is a common pattern and this allows
+  implementors to extract a stack trace from the exception when the log
+  backend supports it. Implementors MUST still verify that the <code>'exception'</code>
+  key is actually an <code>Exception</code> before using it as such, as it MAY contain
+  anything.</p>
+</li>
+</ul>
+<h3 id="14-helper-classes-and-interfaces">1.4 Helper classes and interfaces<a class="headerlink" href="#14-helper-classes-and-interfaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>The <code>Psr\Log\AbstractLogger</code> class lets you implement the <code>LoggerInterface</code>
+  very easily by extending it and implementing the generic <code>log</code> method.
+  The other eight methods are forwarding the message and context to it.</p>
+</li>
+<li>
+<p>Similarly, using the <code>Psr\Log\LoggerTrait</code> only requires you to
+  implement the generic <code>log</code> method. Note that since traits can not implement
+  interfaces, in this case you still have to implement <code>LoggerInterface</code>.</p>
+</li>
+<li>
+<p>The <code>Psr\Log\NullLogger</code> is provided together with the interface. It MAY be
+  used by users of the interface to provide a fall-back "black hole"
+  implementation if no logger is given to them. However, conditional logging
+  may be a better approach if context data creation is expensive.</p>
+</li>
+<li>
+<p>The <code>Psr\Log\LoggerAwareInterface</code> only contains a
+  <code>setLogger(LoggerInterface $logger)</code> method and can be used by frameworks to
+  auto-wire arbitrary instances with a logger.</p>
+</li>
+<li>
+<p>The <code>Psr\Log\LoggerAwareTrait</code> trait can be used to implement the equivalent
+  interface easily in any class. It gives you access to <code>$this-&gt;logger</code>.</p>
+</li>
+<li>
+<p>The <code>Psr\Log\LogLevel</code> class holds constants for the eight log levels.</p>
+</li>
+</ul>
+<h2 id="2-package">2. Package<a class="headerlink" href="#2-package" title="Permanent link">&para;</a></h2>
+<p>The interfaces and classes described as well as relevant exception classes
+and a test suite to verify your implementation are provided as part of the
+<a href="https://packagist.org/packages/psr/log">psr/log</a> package.</p>
+<h2 id="3-psrlogloggerinterface">3. <code>Psr\Log\LoggerInterface</code><a class="headerlink" href="#3-psrlogloggerinterface" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Log</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Describes a logger instance</span>
+<span class="sd"> *</span>
+<span class="sd"> * The message MUST be a string or object implementing __toString().</span>
+<span class="sd"> *</span>
+<span class="sd"> * The message MAY contain placeholders in the form: {foo} where foo</span>
+<span class="sd"> * will be replaced by the context data in key &quot;foo&quot;.</span>
+<span class="sd"> *</span>
+<span class="sd"> * The context array can contain arbitrary data, the only assumption that</span>
+<span class="sd"> * can be made by implementors is that if an Exception instance is given</span>
+<span class="sd"> * to produce a stack trace, it MUST be in a key named &quot;exception&quot;.</span>
+<span class="sd"> *</span>
+<span class="sd"> * See https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md</span>
+<span class="sd"> * for the full interface specification.</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">LoggerInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * System is unusable.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">emergency</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Action must be taken immediately.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Example: Entire website down, database unavailable, etc. This should</span>
+<span class="sd">     * trigger the SMS alerts and wake you up.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">alert</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Critical conditions.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Example: Application component unavailable, unexpected exception.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">critical</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Runtime errors that do not require immediate action but should typically</span>
+<span class="sd">     * be logged and monitored.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">error</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Exceptional occurrences that are not errors.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Example: Use of deprecated APIs, poor use of an API, undesirable things</span>
+<span class="sd">     * that are not necessarily wrong.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">warning</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Normal but significant events.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">notice</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Interesting events.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Example: User logs in, SQL logs.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">info</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Detailed debug information.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">debug</span><span class="p">(</span><span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Logs with an arbitrary level.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param mixed $level</span>
+<span class="sd">     * @param string $message</span>
+<span class="sd">     * @param array $context</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">log</span><span class="p">(</span><span class="nv">$level</span><span class="p">,</span> <span class="nv">$message</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$context</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="4-psrlogloggerawareinterface">4. <code>Psr\Log\LoggerAwareInterface</code><a class="headerlink" href="#4-psrlogloggerawareinterface" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Log</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Describes a logger-aware instance</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">LoggerAwareInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Sets a logger instance on the object</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param LoggerInterface $logger</span>
+<span class="sd">     * @return null</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">setLogger</span><span class="p">(</span><span class="nx">LoggerInterface</span> <span class="nv">$logger</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="5-psrlogloglevel">5. <code>Psr\Log\LogLevel</code><a class="headerlink" href="#5-psrlogloglevel" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Log</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Describes log levels</span>
+<span class="sd"> */</span>
+<span class="k">class</span> <span class="nc">LogLevel</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="no">EMERGENCY</span> <span class="o">=</span> <span class="s1">&#39;emergency&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">ALERT</span>     <span class="o">=</span> <span class="s1">&#39;alert&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">CRITICAL</span>  <span class="o">=</span> <span class="s1">&#39;critical&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">ERROR</span>     <span class="o">=</span> <span class="s1">&#39;error&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">WARNING</span>   <span class="o">=</span> <span class="s1">&#39;warning&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">NOTICE</span>    <span class="o">=</span> <span class="s1">&#39;notice&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">INFO</span>      <span class="o">=</span> <span class="s1">&#39;info&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">DEBUG</span>     <span class="o">=</span> <span class="s1">&#39;debug&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../php-styleguide/" title="Coding Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Coding Styleguide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../php-autoloader/" title="Autoloader" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Autoloader
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Venngage
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

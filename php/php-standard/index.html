@@ -1,0 +1,809 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
+      
+      
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php-standard/">
+      
+      
+        <meta name="author" content="Venngage">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Basic Coding Standard - Venngage</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  PHP
+                </span>
+              
+            
+            Basic Coding Standard
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
+      
+    </i>
+    Venngage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Javascript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/css-js/" title="CSS in Javascript" class="md-nav__link">
+        CSS in Javascript
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Basic Coding Standard
+      </label>
+    
+    <a href="./" title="Basic Coding Standard" class="md-nav__link md-nav__link--active">
+      Basic Coding Standard
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-files" title="2. Files" class="md-nav__link">
+    2. Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-php-tags" title="2.1. PHP Tags" class="md-nav__link">
+    2.1. PHP Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-character-encoding" title="2.2. Character Encoding" class="md-nav__link">
+    2.2. Character Encoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-side-effects" title="2.3. Side Effects" class="md-nav__link">
+    2.3. Side Effects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-namespace-and-class-names" title="3. Namespace and Class Names" class="md-nav__link">
+    3. Namespace and Class Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-class-constants-properties-and-methods" title="4. Class Constants, Properties, and Methods" class="md-nav__link">
+    4. Class Constants, Properties, and Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-constants" title="4.1. Constants" class="md-nav__link">
+    4.1. Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-properties" title="4.2. Properties" class="md-nav__link">
+    4.2. Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-methods" title="4.3. Methods" class="md-nav__link">
+    4.3. Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" title="Overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-files" title="2. Files" class="md-nav__link">
+    2. Files
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-php-tags" title="2.1. PHP Tags" class="md-nav__link">
+    2.1. PHP Tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-character-encoding" title="2.2. Character Encoding" class="md-nav__link">
+    2.2. Character Encoding
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-side-effects" title="2.3. Side Effects" class="md-nav__link">
+    2.3. Side Effects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-namespace-and-class-names" title="3. Namespace and Class Names" class="md-nav__link">
+    3. Namespace and Class Names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-class-constants-properties-and-methods" title="4. Class Constants, Properties, and Methods" class="md-nav__link">
+    4. Class Constants, Properties, and Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-constants" title="4.1. Constants" class="md-nav__link">
+    4.1. Constants
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-properties" title="4.2. Properties" class="md-nav__link">
+    4.2. Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-methods" title="4.3. Methods" class="md-nav__link">
+    4.3. Methods
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/php/php-standard.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                <h1 id="php-basic-coding-standard">PHP Basic Coding Standard<a class="headerlink" href="#php-basic-coding-standard" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>This section of the standard comprises what should be considered the standard
+coding elements that are required to ensure a high level of technical
+interoperability between shared PHP code.</p>
+</blockquote>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<hr />
+<ul>
+<li>
+<p>Files MUST use only <code>&lt;?php</code> and <code>&lt;?=</code> tags.</p>
+</li>
+<li>
+<p>Files MUST use only UTF-8 without BOM for PHP code.</p>
+</li>
+<li>
+<p>Files SHOULD <em>either</em> declare symbols (classes, functions, constants, etc.)
+  <em>or</em> cause side-effects (e.g. generate output, change .ini settings, etc.)
+  but SHOULD NOT do both.</p>
+</li>
+<li>
+<p>Namespaces and classes MUST follow an "autoloading".</p>
+</li>
+<li>
+<p>Class names MUST be declared in <code>StudlyCaps</code>.</p>
+</li>
+<li>
+<p>Class constants MUST be declared in all upper case with underscore separators.</p>
+</li>
+<li>
+<p>Method names MUST be declared in <code>camelCase</code>.</p>
+</li>
+</ul>
+<h2 id="2-files">2. Files<a class="headerlink" href="#2-files" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="21-php-tags"><a href="#files--tags">2.1. PHP Tags</a><a class="headerlink" href="#21-php-tags" title="Permanent link">&para;</a></h3>
+<p>PHP code <strong>MUST</strong> use the long <code>&lt;?php ?&gt;</code> tags or the short-echo <code>&lt;?= ?&gt;</code> tags; it
+MUST NOT use the other tag variations.</p>
+<h3 id="22-character-encoding"><a href="#files--encoding">2.2. Character Encoding</a><a class="headerlink" href="#22-character-encoding" title="Permanent link">&para;</a></h3>
+<p>PHP code MUST use only UTF-8 without BOM.</p>
+<h3 id="23-side-effects"><a href="#files--side-effects">2.3. Side Effects</a><a class="headerlink" href="#23-side-effects" title="Permanent link">&para;</a></h3>
+<p>A file SHOULD declare new symbols (classes, functions, constants,
+etc.) and cause no other side effects, or it SHOULD execute logic with side
+effects, but SHOULD NOT do both.</p>
+<p>The phrase "side effects" means execution of logic not directly related to
+declaring classes, functions, constants, etc., <em>merely from including the
+file</em>.</p>
+<p>"Side effects" include but are not limited to: generating output, explicit
+use of <code>require</code> or <code>include</code>, connecting to external services, modifying ini
+settings, emitting errors or exceptions, modifying global or static variables,
+reading from or writing to a file, and so on.</p>
+<p>The following is an example of a file with both declarations and side effects;
+i.e, an example of what to avoid:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// side effect: change ini settings</span>
+<span class="nb">ini_set</span><span class="p">(</span><span class="s1">&#39;error_reporting&#39;</span><span class="p">,</span> <span class="k">E_ALL</span><span class="p">);</span>
+
+<span class="c1">// side effect: loads a file</span>
+<span class="k">include</span> <span class="s2">&quot;file.php&quot;</span><span class="p">;</span>
+
+<span class="c1">// side effect: generates output</span>
+<span class="k">echo</span> <span class="s2">&quot;&lt;html&gt;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+
+<span class="c1">// declaration</span>
+<span class="k">function</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// function body</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>The following example is of a file that contains declarations without side
+effects; i.e., an example of what to emulate:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// declaration</span>
+<span class="k">function</span> <span class="nf">foo</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// function body</span>
+<span class="p">}</span>
+
+<span class="c1">// conditional declaration is *not* a side effect</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span> <span class="nb">function_exists</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">))</span> <span class="p">{</span>
+    <span class="k">function</span> <span class="nf">bar</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="c1">// function body</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="3-namespace-and-class-names">3. Namespace and Class Names<a class="headerlink" href="#3-namespace-and-class-names" title="Permanent link">&para;</a></h2>
+<hr />
+<p>Namespaces and classes <strong>MUST</strong> follow an "autoloading" PSR: [[PSR-0], [PSR-4]].</p>
+<p>This means each class is in a file by itself, and is in a namespace of at
+least one level: a top-level vendor name.</p>
+<p>Class names <strong>MUST</strong> be declared in <code>StudlyCaps</code>.</p>
+<p>Code written for PHP 5.3 and after <strong>MUST</strong> use formal namespaces.</p>
+<p>For example:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// PHP 5.3 and later:</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Code written for 5.2.x and before SHOULD use the pseudo-namespacing convention
+of <code>Vendor_</code> prefixes on class names.</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="c1">// PHP 5.2.x and earlier:</span>
+<span class="k">class</span> <span class="nc">Vendor_Model_Foo</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2 id="4-class-constants-properties-and-methods">4. Class Constants, Properties, and Methods<a class="headerlink" href="#4-class-constants-properties-and-methods" title="Permanent link">&para;</a></h2>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term <strong>class</strong> refers to all classes, interfaces, and traits.</p>
+</div>
+<h3 id="41-constants"><a href="#classes--constants">4.1. Constants</a><a class="headerlink" href="#41-constants" title="Permanent link">&para;</a></h3>
+<p>Class constants MUST be declared in all upper case with underscore separators.
+For example:</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="k">namespace</span> <span class="nx">Vendor\Model</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Foo</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="no">VERSION</span> <span class="o">=</span> <span class="s1">&#39;1.0&#39;</span><span class="p">;</span>
+    <span class="k">const</span> <span class="no">DATE_APPROVED</span> <span class="o">=</span> <span class="s1">&#39;2012-06-01&#39;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="42-properties"><a href="#classes--properties">4.2. Properties</a><a class="headerlink" href="#42-properties" title="Permanent link">&para;</a></h3>
+<p>This guide intentionally avoids any recommendation regarding the use of
+<code>$StudlyCaps</code>, <code>$camelCase</code>, or <code>$under_score</code> property names.</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>Whatever naming convention is used SHOULD be applied consistently within a
+reasonable scope. That scope may be vendor-level, package-level, class-level,
+or method-level.</p>
+</div>
+<h3 id="43-methods"><a href="#classes--methods">4.3. Methods</a><a class="headerlink" href="#43-methods" title="Permanent link">&para;</a></h3>
+<p>Method names <strong>MUST</strong> be declared in <code>camelCase()</code>.</p>
+<p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../js/css-js/" title="CSS in Javascript" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CSS in Javascript
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../php-styleguide/" title="Coding Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Coding Styleguide
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Venngage
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>

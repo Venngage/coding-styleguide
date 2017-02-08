@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="56px" viewBox="0 0 56 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>venngage-logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="28" cy="39" r="28"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="56" height="56" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polyline id="path-3" points="39.6500685 5.18832082 40.0749691 6.64707383 40.0749691 29.6565309 16.3792896 29.6617509"></polyline>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="23.6956795" height="24.4734301" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="venngage-logo" transform="translate(0.000000, -11.000000)" stroke="#FFFFFF" stroke-width="7">
+            <use id="Oval" mask="url(#mask-2)" xlink:href="#path-1"></use>
+            <use id="Rectangle" mask="url(#mask-4)" transform="translate(28.227129, 17.425036) rotate(45.000000) translate(-28.227129, -17.425036) " xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

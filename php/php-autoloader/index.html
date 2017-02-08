@@ -6,10 +6,10 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A short description of my project">
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
       
       
-        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php/">
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php-autoloader/">
       
       
         <meta name="author" content="Venngage">
@@ -21,7 +21,7 @@
     
     
       
-        <title>PHP Styleguide - Venngage Styleguides</title>
+        <title>Autoloader - Venngage</title>
       
     
     
@@ -68,7 +68,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -85,7 +87,7 @@
                 </span>
               
             
-            PHP Styleguide
+            Autoloader
           
         </span>
       </div>
@@ -148,10 +150,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
       
     </i>
-    Venngage Styleguides
+    Venngage
   </label>
   
     <div class="md-nav__source">
@@ -209,8 +213,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../js/javascript/" title="JS Styleguide" class="md-nav__link">
-        JS Styleguide
+      <a href="../../js/javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
@@ -220,8 +224,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../../js/react/" title="React" class="md-nav__link">
-        React
+      <a href="../../js/react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
       </a>
     
   </li>
@@ -263,13 +267,50 @@
           
   <li class="md-nav__item">
     
+      <a href="../php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
       
     
     
-    <a href="./" title="PHP Styleguide" class="md-nav__link md-nav__link--active">
-      PHP Styleguide
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Autoloader
+      </label>
+    
+    <a href="./" title="Autoloader" class="md-nav__link md-nav__link--active">
+      Autoloader
     </a>
     
       
@@ -279,38 +320,54 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" title="1. Overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-specification" title="2. Specification" class="md-nav__link">
+    2. Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-examples" title="3. Examples" class="md-nav__link">
+    3. Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
     
   </li>
 
         
-      </ul>
-    </nav>
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
   </li>
 
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      About
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
-        About
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
   <li class="md-nav__item">
     
-      <a href="../../about/license/" title="License" class="md-nav__link">
-        License
+      <a href="../php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
       </a>
     
   </li>
@@ -318,6 +375,17 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
   </li>
 
     
@@ -338,6 +406,32 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview" title="1. Overview" class="md-nav__link">
+    1. Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-specification" title="2. Specification" class="md-nav__link">
+    2. Specification
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-examples" title="3. Examples" class="md-nav__link">
+    3. Examples
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -347,12 +441,121 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/php/php.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/php/php-autoloader.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="venngage-php-style-guide">Venngage PHP Style Guide</h1>
-<p>**</p>
+                <h1 id="autoloader">Autoloader<a class="headerlink" href="#autoloader" title="Permanent link">&para;</a></h1>
+<h2 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h2>
+<p>This PSR describes a specification for <a href="http://php.net/autoload">autoloading</a> classes from file
+paths. It is fully interoperable, and can be used in addition to any other
+autoloading specification, including <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md">PSR-0</a>. This PSR also describes where
+to place files that will be autoloaded according to the specification.</p>
+<h2 id="2-specification">2. Specification<a class="headerlink" href="#2-specification" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>The term "class" refers to classes, interfaces, traits, and other similar
+   structures.</p>
+</li>
+<li>
+<p>A fully qualified class name has the following form:</p>
+<div class="codehilite"><pre><span></span>\&lt;NamespaceName&gt;(\&lt;SubNamespaceNames&gt;)*\&lt;ClassName&gt;
+</pre></div>
+
+
+<ol>
+<li>
+<p>The fully qualified class name MUST have a top-level namespace name,
+   also known as a "vendor namespace".</p>
+</li>
+<li>
+<p>The fully qualified class name MAY have one or more sub-namespace
+   names.</p>
+</li>
+<li>
+<p>The fully qualified class name MUST have a terminating class name.</p>
+</li>
+<li>
+<p>Underscores have no special meaning in any portion of the fully
+   qualified class name.</p>
+</li>
+<li>
+<p>Alphabetic characters in the fully qualified class name MAY be any
+   combination of lower case and upper case.</p>
+</li>
+<li>
+<p>All class names MUST be referenced in a case-sensitive fashion.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>When loading a file that corresponds to a fully qualified class name ...</p>
+<ol>
+<li>
+<p>A contiguous series of one or more leading namespace and sub-namespace
+   names, not including the leading namespace separator, in the fully
+   qualified class name (a "namespace prefix") corresponds to at least one
+   "base directory".</p>
+</li>
+<li>
+<p>The contiguous sub-namespace names after the "namespace prefix"
+   correspond to a subdirectory within a "base directory", in which the
+   namespace separators represent directory separators. The subdirectory
+   name MUST match the case of the sub-namespace names.</p>
+</li>
+<li>
+<p>The terminating class name corresponds to a file name ending in <code>.php</code>.
+   The file name MUST match the case of the terminating class name.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Autoloader implementations MUST NOT throw exceptions, MUST NOT raise errors
+   of any level, and SHOULD NOT return a value.</p>
+</li>
+</ol>
+<h2 id="3-examples">3. Examples<a class="headerlink" href="#3-examples" title="Permanent link">&para;</a></h2>
+<p>The table below shows the corresponding file path for a given fully qualified
+class name, namespace prefix, and base directory.</p>
+<table>
+<thead>
+<tr>
+<th>Fully Qualified Class Name</th>
+<th>Namespace Prefix</th>
+<th>Base Directory</th>
+<th>Resulting File Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\Acme\Log\Writer\File_Writer</td>
+<td>Acme\Log\Writer</td>
+<td>./acme-log-writer/lib/</td>
+<td>./acme-log-writer/lib/File_Writer.php</td>
+</tr>
+<tr>
+<td>\Aura\Web\Response\Status</td>
+<td>Aura\Web</td>
+<td>/path/to/aura-web/src/</td>
+<td>/path/to/aura-web/src/Response/Status.php</td>
+</tr>
+<tr>
+<td>\Symfony\Core\Request</td>
+<td>Symfony\Core</td>
+<td>./vendor/Symfony/Core/</td>
+<td>./vendor/Symfony/Core/Request.php</td>
+</tr>
+<tr>
+<td>\Zend\Acl</td>
+<td>Zend</td>
+<td>/usr/includes/Zend/</td>
+<td>/usr/includes/Zend/Acl.php</td>
+</tr>
+</tbody>
+</table>
+<p>For example implementations of autoloaders conforming to the specification,
+please see the <a href="https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader-examples.md">examples file</a>. Example implementations MUST NOT be regarded
+as part of the specification and MAY change at any time.</p>
               
             </article>
           </div>
@@ -365,7 +568,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../js/css-js/" title="CSS in Javascript" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../php-interface/" title="Logger Interface" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -374,19 +577,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                CSS in Javascript
+                Logger Interface
               </span>
             </div>
           </a>
         
         
-          <a href="../../about/license/" title="License" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../php-cache/" title="Cache" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                License
+                Cache
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -418,6 +621,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 

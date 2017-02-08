@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A short description of my project">
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
       
       
         <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/css-js/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>CSS in Javascript - Venngage Styleguides</title>
+        <title>CSS in Javascript - Venngage</title>
       
     
     
@@ -68,7 +68,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -148,10 +150,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
       
     </i>
-    Venngage Styleguides
+    Venngage
   </label>
   
     <div class="md-nav__source">
@@ -209,8 +213,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../javascript/" title="JS Styleguide" class="md-nav__link">
-        JS Styleguide
+      <a href="../javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
@@ -220,8 +224,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../react/" title="React" class="md-nav__link">
-        React
+      <a href="../react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
       </a>
     
   </li>
@@ -321,40 +325,63 @@
           
   <li class="md-nav__item">
     
-      <a href="../../php/php/" title="PHP Styleguide" class="md-nav__link">
-        PHP Styleguide
+      <a href="../../php/php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      About
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
-        About
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
   <li class="md-nav__item">
     
-      <a href="../../about/license/" title="License" class="md-nav__link">
-        License
+      <a href="../../php/php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
       </a>
     
   </li>
@@ -362,6 +389,17 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
   </li>
 
     
@@ -435,7 +473,7 @@
                
               
                 
-                <h1 id="venngage-css-in-javascript-style-guide">Venngage CSS-in-JavaScript Style Guide</h1>
+                <h1 id="venngage-css-in-javascript-style-guide">Venngage CSS-in-JavaScript Style Guide<a class="headerlink" href="#venngage-css-in-javascript-style-guide" title="Permanent link">&para;</a></h1>
 <ol>
 <li><a href="#naming">Naming</a></li>
 <li><a href="#ordering">Ordering</a></li>
@@ -443,7 +481,7 @@
 <li><a href="#inline">Inline</a></li>
 <li><a href="#themes">Themes</a></li>
 </ol>
-<h2 id="naming">Naming</h2>
+<h2 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use camelCase for object keys (i.e. "selectors").</li>
 </ul>
@@ -593,7 +631,7 @@
 </pre></div>
 
 
-<h2 id="ordering">Ordering</h2>
+<h2 id="ordering">Ordering<a class="headerlink" href="#ordering" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Define styles after the component.</li>
 </ul>
@@ -637,7 +675,7 @@ export default withStyles(() =&gt; ({
 </pre></div>
 
 
-<h2 id="nesting">Nesting</h2>
+<h2 id="nesting">Nesting<a class="headerlink" href="#nesting" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Leave a blank line between adjacent blocks at the same indentation level.</li>
 </ul>
@@ -674,7 +712,7 @@ export default withStyles(() =&gt; ({
 </pre></div>
 
 
-<h2 id="inline">Inline</h2>
+<h2 id="inline">Inline<a class="headerlink" href="#inline" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use inline styles for styles that have a high cardinality (e.g. uses the value of a prop) and not for styles that have a low cardinality.</li>
 </ul>
@@ -702,7 +740,7 @@ export default withStyles(() =&gt; ({
 </pre></div>
 
 
-<h2 id="themes">Themes</h2>
+<h2 id="themes">Themes<a class="headerlink" href="#themes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use an abstraction layer such as <a href="https://github.com/airbnb/react-with-styles">react-with-styles</a> that enables theming. <em>react-with-styles gives us things like <code>withStyles()</code>, <code>ThemedStyleSheet</code>, and <code>css()</code> which are used in some of the examples in this document.</em></li>
 </ul>
@@ -899,7 +937,7 @@ export default withStyles(() =&gt; ({
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../react/" title="React" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../react/" title="React Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -908,19 +946,19 @@ export default withStyles(() =&gt; ({
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                React
+                React Styleguide
               </span>
             </div>
           </a>
         
         
-          <a href="../../php/php/" title="PHP Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../php/php-standard/" title="Basic Coding Standard" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                PHP Styleguide
+                Basic Coding Standard
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -952,6 +990,10 @@ export default withStyles(() =&gt; ({
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 

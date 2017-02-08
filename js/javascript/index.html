@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A short description of my project">
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
       
       
         <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/javascript/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>JS Styleguide - Venngage Styleguides</title>
+        <title>Basic Coding Standard - Venngage</title>
       
     
     
@@ -68,7 +68,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -85,7 +87,7 @@
                 </span>
               
             
-            JS Styleguide
+            Basic Coding Standard
           
         </span>
       </div>
@@ -148,10 +150,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
       
     </i>
-    Venngage Styleguides
+    Venngage
   </label>
   
     <div class="md-nav__source">
@@ -215,11 +219,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        JS Styleguide
+        Basic Coding Standard
       </label>
     
-    <a href="./" title="JS Styleguide" class="md-nav__link md-nav__link--active">
-      JS Styleguide
+    <a href="./" title="Basic Coding Standard" class="md-nav__link md-nav__link--active">
+      Basic Coding Standard
     </a>
     
       
@@ -233,9 +237,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#table-of-contents" title="Table of Contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#types" title="Types" class="md-nav__link">
     Types
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-primitives" title="1.1 Primitives" class="md-nav__link">
+    1.1 Primitives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-complex" title="1.2 Complex" class="md-nav__link">
+    1.2 Complex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -244,6 +275,26 @@
     References
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-const" title="2.1 const" class="md-nav__link">
+    2.1 const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-let" title="2.2 let" class="md-nav__link">
+    2.2 let
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -251,12 +302,101 @@
     Objects
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-literal-syntax" title="3.1 Literal syntax" class="md-nav__link">
+    3.1 Literal syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-property-names" title="3.2 Property names" class="md-nav__link">
+    3.2 Property names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-object-method-shorthand" title="3.3 Object method shorthand" class="md-nav__link">
+    3.3 Object method shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-property-value-shorthand" title="3.4 Property value shorthand" class="md-nav__link">
+    3.4 Property value shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-shorthand-properties" title="3.5 shorthand properties" class="md-nav__link">
+    3.5 shorthand properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-quoted-properties" title="3.6 Quoted properties" class="md-nav__link">
+    3.6 Quoted properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-objectprototype" title="3.7 Object.prototype" class="md-nav__link">
+    3.7 Object.prototype
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" title="3.8" class="md-nav__link">
+    3.8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#arrays" title="Arrays" class="md-nav__link">
     Arrays
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" title="4.1" class="md-nav__link">
+    4.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-push" title="4.2 Push" class="md-nav__link">
+    4.2 Push
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-spreads" title="4.3 Spreads" class="md-nav__link">
+    4.3 Spreads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -439,8 +579,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../react/" title="React" class="md-nav__link">
-        React
+      <a href="../react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
       </a>
     
   </li>
@@ -482,40 +622,63 @@
           
   <li class="md-nav__item">
     
-      <a href="../../php/php/" title="PHP Styleguide" class="md-nav__link">
-        PHP Styleguide
+      <a href="../../php/php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      About
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
-        About
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
   <li class="md-nav__item">
     
-      <a href="../../about/license/" title="License" class="md-nav__link">
-        License
+      <a href="../../php/php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
       </a>
     
   </li>
@@ -523,6 +686,17 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
   </li>
 
     
@@ -547,9 +721,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#table-of-contents" title="Table of Contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#types" title="Types" class="md-nav__link">
     Types
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-primitives" title="1.1 Primitives" class="md-nav__link">
+    1.1 Primitives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-complex" title="1.2 Complex" class="md-nav__link">
+    1.2 Complex
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -558,6 +759,26 @@
     References
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-const" title="2.1 const" class="md-nav__link">
+    2.1 const
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-let" title="2.2 let" class="md-nav__link">
+    2.2 let
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -565,12 +786,101 @@
     Objects
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-literal-syntax" title="3.1 Literal syntax" class="md-nav__link">
+    3.1 Literal syntax
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-property-names" title="3.2 Property names" class="md-nav__link">
+    3.2 Property names
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-object-method-shorthand" title="3.3 Object method shorthand" class="md-nav__link">
+    3.3 Object method shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-property-value-shorthand" title="3.4 Property value shorthand" class="md-nav__link">
+    3.4 Property value shorthand
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-shorthand-properties" title="3.5 shorthand properties" class="md-nav__link">
+    3.5 shorthand properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-quoted-properties" title="3.6 Quoted properties" class="md-nav__link">
+    3.6 Quoted properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-objectprototype" title="3.7 Object.prototype" class="md-nav__link">
+    3.7 Object.prototype
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#38" title="3.8" class="md-nav__link">
+    3.8
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#arrays" title="Arrays" class="md-nav__link">
     Arrays
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" title="4.1" class="md-nav__link">
+    4.1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-push" title="4.2 Push" class="md-nav__link">
+    4.2 Push
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-spreads" title="4.3 Spreads" class="md-nav__link">
+    4.3 Spreads
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -757,48 +1067,15 @@
                
               
                 
-                <h1 id="venngage-javascript-style-guide">Venngage JavaScript Style Guide</h1>
-<hr />
+                <h1 id="venngage-javascript-style-guide">Venngage JavaScript Style Guide<a class="headerlink" href="#venngage-javascript-style-guide" title="Permanent link">&para;</a></h1>
 <p><em>Based off of <a href="https://github.com/airbnb/javascript">AirBnB's style guide.</a></em></p>
-<ol>
-<li><a href="#types">Types</a></li>
-<li><a href="#references">References</a></li>
-<li><a href="#objects">Objects</a></li>
-<li><a href="#arrays">Arrays</a></li>
-<li><a href="#destructuring">Destructuring</a></li>
-<li><a href="#strings">Strings</a></li>
-<li><a href="#functions">Functions</a></li>
-<li><a href="#arrow-functions">Arrow Functions</a></li>
-<li><a href="#classes--constructors">Classes &amp; Constructors</a></li>
-<li><a href="#modules">Modules</a></li>
-<li><a href="#iterators-and-generators">Iterators and Generators</a></li>
-<li><a href="#properties">Properties</a></li>
-<li><a href="#variables">Variables</a></li>
-<li><a href="#hoisting">Hoisting</a></li>
-<li><a href="#comparison-operators--equality">Comparison Operators &amp; Equality</a></li>
-<li><a href="#blocks">Blocks</a></li>
-<li><a href="#comments">Comments</a></li>
-<li><a href="#whitespace">Whitespace</a></li>
-<li><a href="#commas">Commas</a></li>
-<li><a href="#semicolons">Semicolons</a></li>
-<li><a href="#type-casting--coercion">Type Casting &amp; Coercion</a></li>
-<li><a href="#naming-conventions">Naming Conventions</a></li>
-<li><a href="#accessors">Accessors</a></li>
-<li><a href="#events">Events</a></li>
-<li><a href="#ecmascript-6-es-2015-styles">ECMAScript 6+ (ES 2015+) Styles</a></li>
-<li><a href="#testing">Testing</a></li>
-<li><a href="#performance">Performance</a></li>
-<li><a href="#resources">Resources</a></li>
-</ol>
-<h2 id="types">Types</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <hr />
+<h3 id="11-primitives"><a href="#types--primitives">1.1 Primitives</a><a class="headerlink" href="#11-primitives" title="Permanent link">&para;</a></h3>
+<p>When you access a primitive type you work directly on its value.</p>
 <ul>
-<li>
-<p><a href="#types--primitives">1.1</a> <strong>Primitives</strong>: When you access a primitive type you work directly on its value.</p>
-</li>
-<li>
-<p><code>string</code></p>
-</li>
+<li><code>string</code></li>
 <li><code>number</code></li>
 <li><code>boolean</code></li>
 <li><code>null</code></li>
@@ -813,13 +1090,10 @@
 </pre></div>
 
 
+<h3 id="12-complex"><a href="#types--complex">1.2 Complex</a><a class="headerlink" href="#12-complex" title="Permanent link">&para;</a></h3>
+<p>When you access a complex type you work on a reference to its value.</p>
 <ul>
-<li>
-<p><a href="#types--complex">1.2</a>  <strong>Complex</strong>: When you access a complex type you work on a reference to its value.</p>
-</li>
-<li>
-<p><code>object</code></p>
-</li>
+<li><code>object</code></li>
 <li><code>array</code></li>
 <li><code>function</code></li>
 </ul>
@@ -833,11 +1107,10 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="references">References</h2>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <hr />
-<ul>
-<li><a href="#references--prefer-const">2.1</a> Use <code>const</code> for all of your references; avoid using <code>var</code>. eslint: <a href="http://eslint.org/docs/rules/prefer-const.html"><code>prefer-const</code></a>, <a href="http://eslint.org/docs/rules/no-const-assign.html"><code>no-const-assign</code></a></li>
-</ul>
+<h3 id="21-const"><a href="#references--prefer-const">2.1 <code>const</code></a><a class="headerlink" href="#21-const" title="Permanent link">&para;</a></h3>
+<p>Use <code>const</code> for all of your references; avoid using <code>var</code>. eslint: <a href="http://eslint.org/docs/rules/prefer-const.html"><code>prefer-const</code></a>, <a href="http://eslint.org/docs/rules/no-const-assign.html"><code>no-const-assign</code></a></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>This ensures that you can't reassign your references, which can lead to bugs and difficult to comprehend code.</p>
@@ -852,9 +1125,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#references--disallow-var">2.2</a> If you must reassign references, use <code>let</code> instead of <code>var</code>. eslint: <a href="http://eslint.org/docs/rules/no-var.html"><code>no-var</code></a> jscs: <a href="http://jscs.info/rule/disallowVar"><code>disallowVar</code></a></li>
-</ul>
+<h3 id="22-let"><a href="#references--disallow-var">2.2 <code>let</code></a><a class="headerlink" href="#22-let" title="Permanent link">&para;</a></h3>
+<p>If you must reassign references, use <code>let</code> instead of <code>var</code>. eslint: <a href="http://eslint.org/docs/rules/no-var.html"><code>no-var</code></a> jscs: <a href="http://jscs.info/rule/disallowVar"><code>disallowVar</code></a></p>
 <blockquote>
 <p>Why? <code>let</code> is block-scoped rather than function-scoped like <code>var</code>.</p>
 </blockquote>
@@ -872,9 +1144,10 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#references--block-scope">2.3</a> Note that both <code>let</code> and <code>const</code> are block-scoped.</li>
-</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Both <code>let</code> and <code>const</code> are block-scoped.</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="c1">// const and let only exist in the blocks they are defined in.</span>
 <span class="p">{</span>
 <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -886,11 +1159,10 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="objects">Objects</h2>
+<h2 id="objects">Objects<a class="headerlink" href="#objects" title="Permanent link">&para;</a></h2>
 <hr />
-<ul>
-<li><a href="#objects--no-new">3.1</a> Use the literal syntax for object creation. eslint: <a href="http://eslint.org/docs/rules/no-new-object.html"><code>no-new-object</code></a></li>
-</ul>
+<h3 id="31-literal-syntax"><a href="#objects--no-new">3.1 Literal syntax</a><a class="headerlink" href="#31-literal-syntax" title="Permanent link">&para;</a></h3>
+<p>Use the literal syntax for object creation. eslint: <a href="http://eslint.org/docs/rules/no-new-object.html"><code>no-new-object</code></a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">item</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Object</span><span class="p">();</span>
 
@@ -899,9 +1171,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#es6-computed-properties">3.2</a> Use computed property names when creating objects with dynamic property names.</li>
-</ul>
+<h3 id="32-property-names"><a href="#es6-computed-properties">3.2 Property names</a><a class="headerlink" href="#32-property-names" title="Permanent link">&para;</a></h3>
+<p>Use computed property names when creating objects with dynamic property names.</p>
 <blockquote>
 <p>Why? They allow you to define all the properties of an object in one place.</p>
 </blockquote>
@@ -925,9 +1196,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#es6-object-shorthand">3.3</a> Use object method shorthand. eslint: <a href="http://eslint.org/docs/rules/object-shorthand.html"><code>object-shorthand</code></a> jscs: <a href="http://jscs.info/rule/requireEnhancedObjectLiterals"><code>requireEnhancedObjectLiterals</code></a></li>
-</ul>
+<h3 id="33-object-method-shorthand"><a href="#es6-object-shorthand">3.3 Object method shorthand</a><a class="headerlink" href="#33-object-method-shorthand" title="Permanent link">&para;</a></h3>
+<p>Use object method shorthand. eslint: <a href="http://eslint.org/docs/rules/object-shorthand.html"><code>object-shorthand</code></a> jscs: <a href="http://jscs.info/rule/requireEnhancedObjectLiterals"><code>requireEnhancedObjectLiterals</code></a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">atom</span> <span class="o">=</span> <span class="p">{</span>
 <span class="nx">value</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -948,9 +1218,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#es6-object-concise">3.4</a> Use property value shorthand. eslint: <a href="http://eslint.org/docs/rules/object-shorthand.html"><code>object-shorthand</code></a> jscs: <a href="http://jscs.info/rule/requireEnhancedObjectLiterals"><code>requireEnhancedObjectLiterals</code></a></li>
-</ul>
+<h3 id="34-property-value-shorthand"><a href="#es6-object-concise">3.4 Property value shorthand</a><a class="headerlink" href="#34-property-value-shorthand" title="Permanent link">&para;</a></h3>
+<p>Use property value shorthand. eslint: <a href="http://eslint.org/docs/rules/object-shorthand.html"><code>object-shorthand</code></a> jscs: <a href="http://jscs.info/rule/requireEnhancedObjectLiterals"><code>requireEnhancedObjectLiterals</code></a></p>
 <blockquote>
 <p>Why? It is shorter to write and descriptive.</p>
 </blockquote>
@@ -968,9 +1237,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#objects--grouped-shorthand">3.5</a> Group your shorthand properties at the beginning of your object declaration.</li>
-</ul>
+<h3 id="35-shorthand-properties"><a href="#objects--grouped-shorthand">3.5 shorthand properties</a><a class="headerlink" href="#35-shorthand-properties" title="Permanent link">&para;</a></h3>
+<p>Group your shorthand properties at the beginning of your object declaration.</p>
 <blockquote>
 <p>Why? It's easier to tell which properties are using the shorthand.</p>
 </blockquote>
@@ -979,51 +1247,49 @@
 
 <span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-<span class="nx">episodeOne</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-<span class="nx">twoJediWalkIntoACantina</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-<span class="nx">lukeSkywalker</span><span class="p">,</span>
-<span class="nx">episodeThree</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-<span class="nx">mayTheFourth</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-<span class="nx">anakinSkywalker</span><span class="p">,</span>
+  <span class="nx">episodeOne</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">twoJediWalkIntoACantina</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">lukeSkywalker</span><span class="p">,</span>
+  <span class="nx">episodeThree</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nx">mayTheFourth</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="nx">anakinSkywalker</span><span class="p">,</span>
 <span class="p">};</span>
 
 <span class="c1">// good</span>
 <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span>
-<span class="nx">lukeSkywalker</span><span class="p">,</span>
-<span class="nx">anakinSkywalker</span><span class="p">,</span>
-<span class="nx">episodeOne</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-<span class="nx">twoJediWalkIntoACantina</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
-<span class="nx">episodeThree</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-<span class="nx">mayTheFourth</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="nx">lukeSkywalker</span><span class="p">,</span>
+  <span class="nx">anakinSkywalker</span><span class="p">,</span>
+  <span class="nx">episodeOne</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">twoJediWalkIntoACantina</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">episodeThree</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nx">mayTheFourth</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
 <span class="p">};</span>
 </pre></div>
 
 
-<ul>
-<li><a href="#objects--quoted-props">3.6</a> Only quote properties that are invalid identifiers. eslint: <a href="http://eslint.org/docs/rules/quote-props.html"><code>quote-props</code></a> jscs: <a href="http://jscs.info/rule/disallowQuotedKeysInObjects"><code>disallowQuotedKeysInObjects</code></a></li>
-</ul>
+<h3 id="36-quoted-properties"><a href="#objects--quoted-props">3.6 Quoted properties</a><a class="headerlink" href="#36-quoted-properties" title="Permanent link">&para;</a></h3>
+<p>Only quote properties that are invalid identifiers. eslint: <a href="http://eslint.org/docs/rules/quote-props.html"><code>quote-props</code></a> jscs: <a href="http://jscs.info/rule/disallowQuotedKeysInObjects"><code>disallowQuotedKeysInObjects</code></a></p>
 <blockquote>
 <p>Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">bad</span> <span class="o">=</span> <span class="p">{</span>
-<span class="s1">&#39;foo&#39;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-<span class="s1">&#39;bar&#39;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-<span class="s1">&#39;data-blah&#39;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="s1">&#39;foo&#39;</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="s1">&#39;bar&#39;</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="s1">&#39;data-blah&#39;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
 <span class="p">};</span>
 
 <span class="c1">// good</span>
 <span class="kr">const</span> <span class="nx">good</span> <span class="o">=</span> <span class="p">{</span>
-<span class="nx">foo</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
-<span class="nx">bar</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
-<span class="s1">&#39;data-blah&#39;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
+  <span class="nx">foo</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nx">bar</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="s1">&#39;data-blah&#39;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
 <span class="p">};</span>
 </pre></div>
 
 
-<ul>
-<li><a href="#objects--prototype-builtins">3.7</a> Do not call <code>Object.prototype</code> methods directly, such as <code>hasOwnProperty</code>, <code>propertyIsEnumerable</code>, and <code>isPrototypeOf</code>.</li>
-</ul>
+<h3 id="37-objectprototype"><a href="#objects--prototype-builtins">3.7 <code>Object.prototype</code></a><a class="headerlink" href="#37-objectprototype" title="Permanent link">&para;</a></h3>
+<p>Do not call <code>Object.prototype</code> methods directly, such as <code>hasOwnProperty</code>, <code>propertyIsEnumerable</code>, and <code>isPrototypeOf</code>.</p>
 <blockquote>
 <p>Why? These methods may be shadowed by properties on the object in question - consider <code>{ hasOwnProperty: false }</code> - or, the object may be a null object (<code>Object.create(null)</code>).</p>
 </blockquote>
@@ -1042,9 +1308,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#objects--rest-spread">3.8</a> Prefer the object spread operator over <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a> to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.</li>
-</ul>
+<h3 id="38"><a href="#objects--rest-spread">3.8</a><a class="headerlink" href="#38" title="Permanent link">&para;</a></h3>
+<p>Prefer the object spread operator over <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign"><code>Object.assign</code></a> to shallow-copy objects. Use the object rest operator to get a new object with certain properties omitted.</p>
 <div class="codehilite"><pre><span></span><span class="c1">// very bad</span>
 <span class="kr">const</span> <span class="nx">original</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">a</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">b</span><span class="o">:</span> <span class="mi">2</span> <span class="p">};</span>
 <span class="kr">const</span> <span class="nx">copy</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">original</span><span class="p">,</span> <span class="p">{</span> <span class="nx">c</span><span class="o">:</span> <span class="mi">3</span> <span class="p">});</span> <span class="c1">// this mutates `original` ಠ_ಠ</span>
@@ -1063,11 +1328,10 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="arrays">Arrays</h2>
+<h2 id="arrays">Arrays<a class="headerlink" href="#arrays" title="Permanent link">&para;</a></h2>
 <hr />
-<ul>
-<li><a href="#arrays--literals">4.1</a> Use the literal syntax for array creation. eslint: <a href="http://eslint.org/docs/rules/no-array-constructor.html"><code>no-array-constructor</code></a></li>
-</ul>
+<h3 id="41"><a href="#arrays--literals">4.1</a><a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>Use the literal syntax for array creation. eslint: <a href="http://eslint.org/docs/rules/no-array-constructor.html"><code>no-array-constructor</code></a></p>
 <div class="codehilite"><pre><span></span><span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">();</span>
 
@@ -1076,9 +1340,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#arrays--push">4.2</a> Use <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a> instead of direct assignment to add items to an array.</li>
-</ul>
+<h3 id="42-push"><a href="#arrays--push">4.2 Push</a><a class="headerlink" href="#42-push" title="Permanent link">&para;</a></h3>
+<p>Use <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push">Array#push</a> instead of direct assignment to add items to an array.</p>
 <div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="nx">someStack</span> <span class="o">=</span> <span class="p">[];</span>
 
 <span class="c1">// bad</span>
@@ -1089,9 +1352,8 @@
 </pre></div>
 
 
-<ul>
-<li><a href="#es6-array-spreads">4.3</a> Use array spreads <code>...</code> to copy arrays.</li>
-</ul>
+<h3 id="43-spreads"><a href="#es6-array-spreads">4.3 Spreads</a><a class="headerlink" href="#43-spreads" title="Permanent link">&para;</a></h3>
+<p>Use array spreads <code>...</code> to copy arrays.</p>
 <div class="codehilite"><pre><span></span><span class="c1">// bad</span>
 <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">itemsCopy</span> <span class="o">=</span> <span class="p">[];</span>
@@ -1164,7 +1426,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="destructuring">Destructuring</h2>
+<h2 id="destructuring">Destructuring<a class="headerlink" href="#destructuring" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#destructuring--object">5.1</a> Use object destructuring when accessing and using multiple properties of an object. jscs: <a href="http://jscs.info/rule/requireObjectDestructuring"><code>requireObjectDestructuring</code></a></li>
@@ -1234,7 +1496,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="strings">Strings</h2>
+<h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#strings--quotes">6.1</a> Use single quotes <code>''</code> for strings. eslint: <a href="http://eslint.org/docs/rules/quotes.html"><code>quotes</code></a> jscs: <a href="http://jscs.info/rule/validateQuoteMarks"><code>validateQuoteMarks</code></a></li>
@@ -1321,7 +1583,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="functions">Functions</h2>
+<h2 id="functions">Functions<a class="headerlink" href="#functions" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#functions--declarations">7.1</a> Use named function expressions instead of function declarations. eslint: <a href="http://eslint.org/docs/rules/func-style"><code>func-style</code></a> jscs: <a href="http://jscs.info/rule/disallowFunctionDeclarations"><code>disallowFunctionDeclarations</code></a></li>
@@ -1612,7 +1874,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="arrow-functions">Arrow Functions</h2>
+<h2 id="arrow-functions">Arrow Functions<a class="headerlink" href="#arrow-functions" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#arrows--use-them">8.1</a> When you must use function expressions (as when passing an anonymous function), use arrow function notation. eslint: <a href="http://eslint.org/docs/rules/prefer-arrow-callback.html"><code>prefer-arrow-callback</code></a>, <a href="http://eslint.org/docs/rules/arrow-spacing.html"><code>arrow-spacing</code></a> jscs: <a href="http://jscs.info/rule/requireArrowFunctions"><code>requireArrowFunctions</code></a></li>
@@ -1738,7 +2000,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="classes-constructors">Classes &amp; Constructors</h2>
+<h2 id="classes-constructors">Classes &amp; Constructors<a class="headerlink" href="#classes-constructors" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#constructors--use-class">9.1</a> Always use <code>class</code>. Avoid manipulating <code>prototype</code> directly.</li>
@@ -1906,7 +2168,7 @@
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="modules">Modules</h2>
+<h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#modules--use-them">10.1</a> Always use modules (<code>import</code>/<code>export</code>) over a non-standard module system. You can always transpile to your preferred module system.</li>
@@ -2070,7 +2332,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="iterators-and-generators">Iterators and Generators</h2>
+<h2 id="iterators-and-generators">Iterators and Generators<a class="headerlink" href="#iterators-and-generators" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#iterators--nope">11.1</a> Don't use iterators. Prefer JavaScript's higher-order functions instead of loops like <code>for-in</code> or <code>for-of</code>. eslint: <a href="http://eslint.org/docs/rules/no-iterator.html"><code>no-iterator</code></a> <a href="http://eslint.org/docs/rules/no-restricted-syntax"><code>no-restricted-syntax</code></a></li>
@@ -2181,7 +2443,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="properties">Properties</h2>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#properties--dot">12.1</a> Use dot notation when accessing properties. eslint: <a href="http://eslint.org/docs/rules/dot-notation.html"><code>dot-notation</code></a> jscs: <a href="http://jscs.info/rule/requireDotNotation"><code>requireDotNotation</code></a></li>
@@ -2216,7 +2478,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="variables">Variables</h2>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#variables--const">13.1</a> Always use <code>const</code> to declare variables. Not doing so will result in global variables. We want to avoid polluting the global namespace. Captain Planet warned us of that. eslint: <a href="http://eslint.org/docs/rules/no-undef"><code>no-undef</code></a> <a href="http://eslint.org/docs/rules/prefer-const"><code>prefer-const</code></a></li>
@@ -2388,7 +2650,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="hoisting">Hoisting</h2>
+<h2 id="hoisting">Hoisting<a class="headerlink" href="#hoisting" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#hoisting--about">14.1</a> <code>var</code> declarations get hoisted to the top of their scope, their assignment does not. <code>const</code> and <code>let</code> declarations are blessed with a new concept called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_and_errors_with_let">Temporal Dead Zones (TDZ)</a>. It's important to know why <a href="http://es-discourse.com/t/why-typeof-is-no-longer-safe/15">typeof is no longer safe</a>.</li>
@@ -2487,7 +2749,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 <li>For more information refer to <a href="http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting/">JavaScript Scoping &amp; Hoisting</a> by <a href="http://www.adequatelygood.com/">Ben Cherry</a>.</li>
 </ul>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="comparison-operators-equality">Comparison Operators &amp; Equality</h2>
+<h2 id="comparison-operators-equality">Comparison Operators &amp; Equality<a class="headerlink" href="#comparison-operators-equality" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li>
@@ -2642,7 +2904,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="blocks">Blocks</h2>
+<h2 id="blocks">Blocks<a class="headerlink" href="#blocks" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#blocks--braces">16.1</a> Use braces with all multi-line blocks.</li>
@@ -2692,7 +2954,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="comments">Comments</h2>
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#comments--multiline">17.1</a> Use <code>/** ... */</code> for multi-line comments.</li>
@@ -2834,7 +3096,7 @@ eslint: <a href="https://github.com/benmosher/eslint-plugin-import/blob/master/d
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="whitespace">Whitespace</h2>
+<h2 id="whitespace">Whitespace<a class="headerlink" href="#whitespace" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#whitespace--spaces">18.1</a> Use soft tabs set to 2 spaces. eslint: <a href="http://eslint.org/docs/rules/indent.html"><code>indent</code></a> jscs: <a href="http://jscs.info/rule/validateIndentation"><code>validateIndentation</code></a></li>
@@ -3160,7 +3422,7 @@ emphasizes that the line is a method call, not a new statement. eslint: <a href=
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="commas">Commas</h2>
+<h2 id="commas">Commas<a class="headerlink" href="#commas" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#commas--leading-trailing">19.1</a> Leading commas: <strong>Nope</strong>. eslint: <a href="http://eslint.org/docs/rules/comma-style.html"><code>comma-style</code></a> jscs: <a href="http://jscs.info/rule/requireCommaBeforeLineBreak"><code>requireCommaBeforeLineBreak</code></a></li>
@@ -3295,7 +3557,7 @@ const hero = {
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="semicolons">Semicolons</h2>
+<h2 id="semicolons">Semicolons<a class="headerlink" href="#semicolons" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#20.1">20.1</a> <strong>Yup.</strong> eslint: <a href="http://eslint.org/docs/rules/semi.html"><code>semi</code></a> jscs: <a href="http://jscs.info/rule/requireSemicolons"><code>requireSemicolons</code></a></li>
@@ -3322,7 +3584,7 @@ const hero = {
 
 <p><a href="https://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214%237365214">Read more</a>.</p>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="type-casting-coercion">Type Casting &amp; Coercion</h2>
+<h2 id="type-casting-coercion">Type Casting &amp; Coercion<a class="headerlink" href="#type-casting-coercion" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li>
@@ -3410,7 +3672,7 @@ const hero = {
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="naming-conventions">Naming Conventions</h2>
+<h2 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#naming--descriptive">22.1</a> Avoid single letter names. Be descriptive with your naming. eslint: <a href="http://eslint.org/docs/rules/id-length"><code>id-length</code></a></li>
@@ -3596,7 +3858,7 @@ const hero = {
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="accessors">Accessors</h2>
+<h2 id="accessors">Accessors<a class="headerlink" href="#accessors" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a name="accessors--not-required"></a><a name="23.1"></a>
 - <a href="#accessors--not-required">23.1</a> Accessor functions for properties are not required.</p>
@@ -3660,7 +3922,7 @@ const hero = {
 
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="events">Events</h2>
+<h2 id="events">Events<a class="headerlink" href="#events" title="Permanent link">&para;</a></h2>
 <hr />
 <p><a name="events--hash"></a><a name="24.1"></a>
 - <a href="#events--hash">24.1</a> When attaching data payloads to events (whether DOM events or something more proprietary like Backbone events), pass a hash instead of a raw value. This allows a subsequent contributor to add more data to the event payload without finding and updating every handler for the event. For example, instead of:</p>
@@ -3689,7 +3951,7 @@ const hero = {
 
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
 <p><a name="ecmascript-6-styles"></a></p>
-<h2 id="ecmascript-6-es-2015-styles">ECMAScript 6+ (ES 2015+) Styles</h2>
+<h2 id="ecmascript-6-es-2015-styles">ECMAScript 6+ (ES 2015+) Styles<a class="headerlink" href="#ecmascript-6-es-2015-styles" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li>
@@ -3716,7 +3978,7 @@ const hero = {
 <p><a href="https://tc39.github.io/process-document/">They are not finalized</a>, and they are subject to change or to be withdrawn entirely. We want to use JavaScript, and proposals are not JavaScript yet.</p>
 </div>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="testing">Testing</h2>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="#testing--yup">28.1</a> <strong>Yup.</strong></li>
@@ -3739,7 +4001,7 @@ const hero = {
 </li>
 </ul>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="performance">Performance</h2>
+<h2 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h2>
 <hr />
 <ul>
 <li><a href="https://www.kellegous.com/j/2013/01/26/layout-performance/">On Layout &amp; Web Performance</a></li>
@@ -3753,7 +4015,7 @@ const hero = {
 <li>Loading...</li>
 </ul>
 <p><strong><a href="#table-of-contents">⬆ back to top</a></strong></p>
-<h2 id="resources">Resources</h2>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>Learning ES6</strong></p>
 <ul>
@@ -3859,13 +4121,13 @@ const hero = {
           </a>
         
         
-          <a href="../react/" title="React" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../react/" title="React Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                React
+                React Styleguide
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -3897,6 +4159,10 @@ const hero = {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 

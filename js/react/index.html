@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="A short description of my project">
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
       
       
         <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/js/react/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>React - Venngage Styleguides</title>
+        <title>React Styleguide - Venngage</title>
       
     
     
@@ -68,7 +68,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="Venngage Styleguides" class=" md-icon md-icon--home  md-header-nav__button">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
           
         </a>
       </div>
@@ -85,7 +87,7 @@
                 </span>
               
             
-            React
+            React Styleguide
           
         </span>
       </div>
@@ -148,10 +150,12 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary">
   <label class="md-nav__title md-nav__title--site" for="drawer">
-    <i class=" md-icon md-icon--home  md-nav__button">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
       
     </i>
-    Venngage Styleguides
+    Venngage
   </label>
   
     <div class="md-nav__source">
@@ -209,8 +213,8 @@
           
   <li class="md-nav__item">
     
-      <a href="../javascript/" title="JS Styleguide" class="md-nav__link">
-        JS Styleguide
+      <a href="../javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
@@ -226,11 +230,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="toc">
-        React
+        React Styleguide
       </label>
     
-    <a href="./" title="React" class="md-nav__link md-nav__link--active">
-      React
+    <a href="./" title="React Styleguide" class="md-nav__link md-nav__link--active">
+      React Styleguide
     </a>
     
       
@@ -391,40 +395,63 @@
           
   <li class="md-nav__item">
     
-      <a href="../../php/php/" title="PHP Styleguide" class="md-nav__link">
-        PHP Styleguide
+      <a href="../../php/php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
       </a>
     
   </li>
 
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      About
-    </label>
-    <nav class="md-nav" data-md-component="collapsible">
-      <label class="md-nav__title" for="nav-4">
-        About
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
         
           
           
   <li class="md-nav__item">
     
-      <a href="../../about/license/" title="License" class="md-nav__link">
-        License
+      <a href="../../php/php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-cache/" title="Cache" class="md-nav__link">
+        Cache
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../php/php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
       </a>
     
   </li>
@@ -432,6 +459,17 @@
         
       </ul>
     </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
   </li>
 
     
@@ -575,9 +613,9 @@
                
               
                 
-                <h1 id="venngage-reactjsx-style-guide">Venngage React/JSX Style Guide</h1>
+                <h1 id="venngage-reactjsx-style-guide">Venngage React/JSX Style Guide<a class="headerlink" href="#venngage-reactjsx-style-guide" title="Permanent link">&para;</a></h1>
 <p><em>A mostly reasonable approach to React and JSX</em></p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
 <ol>
 <li><a href="#basic-rules">Basic Rules</a></li>
 <li><a href="#class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</a></li>
@@ -594,14 +632,14 @@
 <li><a href="#ordering">Ordering</a></li>
 <li><a href="#ismounted"><code>isMounted</code></a></li>
 </ol>
-<h2 id="basic-rules">Basic Rules</h2>
+<h2 id="basic-rules">Basic Rules<a class="headerlink" href="#basic-rules" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Only include one React component per file.</li>
 <li>However, multiple <a href="https://facebook.github.io/react/docs/reusable-components.html#stateless-functions">Stateless, or Pure, Components</a> are allowed per file. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md#ignorestateless"><code>react/no-multi-comp</code></a>.</li>
 <li>Always use JSX syntax.</li>
 <li>Do not use <code>React.createElement</code> unless you're initializing the app from a file that is not JSX.</li>
 </ul>
-<h2 id="class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless</h2>
+<h2 id="class-vs-reactcreateclass-vs-stateless">Class vs <code>React.createClass</code> vs stateless<a class="headerlink" href="#class-vs-reactcreateclass-vs-stateless" title="Permanent link">&para;</a></h2>
 <ul>
 <li>If you have internal state and/or refs, prefer <code>class extends React.Component</code> over <code>React.createClass</code> unless you have a very good reason to use mixins. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md"><code>react/prefer-es6-class</code></a> <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md"><code>react/prefer-stateless-function</code></a></li>
 </ul>
@@ -643,7 +681,7 @@ function Listing({ hello }) {
 </pre></div>
 
 
-<h2 id="naming">Naming</h2>
+<h2 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Extensions</strong>: Use <code>.jsx</code> extension for React components.</li>
 <li><strong>Filename</strong>: Use PascalCase for filenames. E.g., <code>ReservationCard.jsx</code>.</li>
@@ -720,7 +758,7 @@ export default function withFoo(WrappedComponent) {
 </pre></div>
 
 
-<h2 id="declaration">Declaration</h2>
+<h2 id="declaration">Declaration<a class="headerlink" href="#declaration" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Do not use <code>displayName</code> for naming components. Instead, name the component by reference.</li>
 </ul>
@@ -736,7 +774,7 @@ export default class ReservationCard extends React.Component {
 </pre></div>
 
 
-<h2 id="alignment">Alignment</h2>
+<h2 id="alignment">Alignment<a class="headerlink" href="#alignment" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Follow these alignment styles for JSX syntax. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md"><code>react/jsx-closing-bracket-location</code></a></li>
 </ul>
@@ -763,7 +801,7 @@ export default class ReservationCard extends React.Component {
 </pre></div>
 
 
-<h2 id="quotes">Quotes</h2>
+<h2 id="quotes">Quotes<a class="headerlink" href="#quotes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always use double quotes (<code>"</code>) for JSX attributes, but single quotes (<code>'</code>) for all other JS. eslint: <a href="http://eslint.org/docs/rules/jsx-quotes"><code>jsx-quotes</code></a></li>
 </ul>
@@ -784,7 +822,7 @@ export default class ReservationCard extends React.Component {
 </pre></div>
 
 
-<h2 id="spacing">Spacing</h2>
+<h2 id="spacing">Spacing<a class="headerlink" href="#spacing" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always include a single space in your self-closing tag. eslint: <a href="http://eslint.org/docs/rules/no-multi-spaces"><code>no-multi-spaces</code></a>, <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md"><code>react/jsx-space-before-closing</code></a></li>
 </ul>
@@ -814,7 +852,7 @@ export default class ReservationCard extends React.Component {
 </pre></div>
 
 
-<h2 id="props">Props</h2>
+<h2 id="props">Props<a class="headerlink" href="#props" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always use camelCase for prop names.</li>
 </ul>
@@ -959,7 +997,7 @@ children: null,
 </pre></div>
 
 
-<h2 id="refs">Refs</h2>
+<h2 id="refs">Refs<a class="headerlink" href="#refs" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always use ref callbacks. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md"><code>react/no-string-refs</code></a></li>
 </ul>
@@ -975,7 +1013,7 @@ children: null,
 </pre></div>
 
 
-<h2 id="parentheses">Parentheses</h2>
+<h2 id="parentheses">Parentheses<a class="headerlink" href="#parentheses" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Wrap JSX tags in parentheses when they span more than one line. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md"><code>react/wrap-multilines</code></a></li>
 </ul>
@@ -1003,7 +1041,7 @@ render() {
 </pre></div>
 
 
-<h2 id="tags">Tags</h2>
+<h2 id="tags">Tags<a class="headerlink" href="#tags" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Always self-close tags that have no children. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md"><code>react/self-closing-comp</code></a></li>
 </ul>
@@ -1031,7 +1069,7 @@ render() {
 </pre></div>
 
 
-<h2 id="methods">Methods</h2>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Use arrow functions to close over local variables.</li>
 </ul>
@@ -1127,7 +1165,7 @@ render() {
 </pre></div>
 
 
-<h2 id="ordering">Ordering</h2>
+<h2 id="ordering">Ordering<a class="headerlink" href="#ordering" title="Permanent link">&para;</a></h2>
 <hr />
 <p><strong>Ordering for <code>class extends React.Component</code>:</strong></p>
 <ol>
@@ -1204,7 +1242,7 @@ export default Link;
 <li><em>optional render methods</em> like <code>renderNavigation()</code> or <code>renderProfilePicture()</code></li>
 <li><code>render</code></li>
 </ol>
-<h2 id="ismounted"><code>isMounted</code></h2>
+<h2 id="ismounted"><code>isMounted</code><a class="headerlink" href="#ismounted" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Do not use <code>isMounted</code>. eslint: <a href="https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md"><code>react/no-is-mounted</code></a></li>
 </ul>
@@ -1224,7 +1262,7 @@ export default Link;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../javascript/" title="JS Styleguide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../javascript/" title="Basic Coding Standard" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1233,7 +1271,7 @@ export default Link;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                JS Styleguide
+                Basic Coding Standard
               </span>
             </div>
           </a>
@@ -1277,6 +1315,10 @@ export default Link;
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
       <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
     
   </div>
 

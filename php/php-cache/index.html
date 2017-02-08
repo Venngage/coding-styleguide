@@ -1,0 +1,1114 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Venngage JS and PHP Coding Styleguide">
+      
+      
+        <link rel="canonical" href="https://enicol.github.io/venngage-styleguide/php/php-cache/">
+      
+      
+        <meta name="author" content="Venngage">
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.ico">
+      
+      <meta name="generator" content="mkdocs+mkdocs-material#1.0.3">
+    
+    
+      
+        <title>Cache - Venngage</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-facb31f4a3.js"></script>
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-f3ab63f78a.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-02ce7adcc2.palette.css">
+      
+      
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Venngage" class=" md-logo  md-header-nav__button">
+          
+            <img src="../../images/venngage-logo.svg" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  PHP
+                </span>
+              
+            
+            Cache
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search">
+  <div class="md-search__overlay"></div>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" accesskey="s" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <label class="md-icon md-search__icon" for="search"></label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+              
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+            
+          </div>
+      </div>
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <i class=" md-logo  md-nav__button">
+      
+        <img src="../../images/venngage-logo.svg">
+      
+    </i>
+    Venngage
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/enicol/venngage-styleguide" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../.." title="Home" class="md-nav__link">
+        Home
+      </a>
+    
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Javascript
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-2">
+        Javascript
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/javascript/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/react/" title="React Styleguide" class="md-nav__link">
+        React Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../../js/css-js/" title="CSS in Javascript" class="md-nav__link">
+        CSS in Javascript
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      PHP
+    </label>
+    <nav class="md-nav" data-md-component="collapsible">
+      <label class="md-nav__title" for="nav-3">
+        PHP
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-standard/" title="Basic Coding Standard" class="md-nav__link">
+        Basic Coding Standard
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-styleguide/" title="Coding Styleguide" class="md-nav__link">
+        Coding Styleguide
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-interface/" title="Logger Interface" class="md-nav__link">
+        Logger Interface
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-autoloader/" title="Autoloader" class="md-nav__link">
+        Autoloader
+      </a>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Cache
+      </label>
+    
+    <a href="./" title="Cache" class="md-nav__link md-nav__link--active">
+      Cache
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goal" title="Goal" class="md-nav__link">
+    Goal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" title="Definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" title="Key Concepts" class="md-nav__link">
+    Key Concepts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pool" title="Pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items" title="Items" class="md-nav__link">
+    Items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" title="Error handling" class="md-nav__link">
+    Error handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" title="Interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cacheiteminterface" title="CacheItemInterface" class="md-nav__link">
+    CacheItemInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheitempoolinterface" title="CacheItemPoolInterface" class="md-nav__link">
+    CacheItemPoolInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheexception" title="CacheException" class="md-nav__link">
+    CacheException
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalidargumentexception" title="InvalidArgumentException" class="md-nav__link">
+    InvalidArgumentException
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+  <li class="md-nav__item">
+    
+      <a href="../php-http-messages/" title="HTTP Messages" class="md-nav__link">
+        HTTP Messages
+      </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+  <li class="md-nav__item">
+    
+      <a href="../../about/license/" title="Licenses" class="md-nav__link">
+        Licenses
+      </a>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" title="Introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goal" title="Goal" class="md-nav__link">
+    Goal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitions" title="Definitions" class="md-nav__link">
+    Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" title="Data" class="md-nav__link">
+    Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts" title="Key Concepts" class="md-nav__link">
+    Key Concepts
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pool" title="Pool" class="md-nav__link">
+    Pool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#items" title="Items" class="md-nav__link">
+    Items
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" title="Error handling" class="md-nav__link">
+    Error handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interfaces" title="Interfaces" class="md-nav__link">
+    Interfaces
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cacheiteminterface" title="CacheItemInterface" class="md-nav__link">
+    CacheItemInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheitempoolinterface" title="CacheItemPoolInterface" class="md-nav__link">
+    CacheItemPoolInterface
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cacheexception" title="CacheException" class="md-nav__link">
+    CacheException
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invalidargumentexception" title="InvalidArgumentException" class="md-nav__link">
+    InvalidArgumentException
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+               
+                 <a href="https://github.com/enicol/venngage-styleguide/edit/master/docs/php/php-cache.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+               
+              
+                
+                  <h1>Cache</h1>
+                
+                <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Caching is a common way to improve the performance of any project, making
+caching libraries one of the most common features of many frameworks and
+libraries. This has lead to a situation where many libraries roll their own
+caching libraries, with various levels of functionality. These differences are
+causing developers to have to learn multiple systems which may or may not
+provide the functionality they need. In addition, the developers of caching
+libraries themselves face a choice between only supporting a limited number
+of frameworks or creating a large number of adapter classes.</p>
+<p>A common interface for caching systems will solve these problems. Library and
+framework developers can count on the caching systems working the way they're
+expecting, while the developers of caching systems will only have to implement
+a single set of interfaces rather than a whole assortment of adapters.</p>
+<h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
+<div class="admonition success">
+<p>The goal of this PSR is to allow developers to create cache-aware libraries that
+can be integrated into existing frameworks and systems without the need for
+custom development.</p>
+</div>
+<h2 id="definitions">Definitions<a class="headerlink" href="#definitions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Calling Library</strong> - The library or code that actually needs the cache
+services. This library will utilize caching services that implement this
+standard's interfaces, but will otherwise have no knowledge of the
+implementation of those caching services.</p>
+</li>
+<li>
+<p><strong>Implementing Library</strong> - This library is responsible for implementing
+this standard in order to provide caching services to any Calling Library. The
+Implementing Library MUST provide classes which implement the
+Cache\CacheItemPoolInterface and Cache\CacheItemInterface interfaces.
+Implementing Libraries MUST support at minimum TTL functionality as described
+below with whole-second granularity.</p>
+</li>
+<li>
+<p><strong>TTL</strong> - The Time To Live (TTL) of an item is the amount of time between
+when that item is stored and it is considered stale. The TTL is normally defined
+by an integer representing time in seconds, or a DateInterval object.</p>
+</li>
+<li>
+<p><strong>Expiration</strong> - The actual time when an item is set to go stale. This it
+typically calculated by adding the TTL to the time when an object is stored, but
+may also be explicitly set with DateTime object.</p>
+<p>An item with a 300 second TTL stored at 1:30:00 will have an expiration of
+1:35:00.</p>
+<p>Implementing Libraries MAY expire an item before its requested Expiration Time,
+but MUST treat an item as expired once its Expiration Time is reached. If a calling
+library asks for an item to be saved but does not specify an expiration time, or
+specifies a null expiration time or TTL, an Implementing Library MAY use a configured
+default duration. If no default duration has been set, the Implementing Library
+MUST interpret that as a request to cache the item forever, or for as long as the
+underlying implementation supports.</p>
+</li>
+<li>
+<p><strong>Key</strong> - A string of at least one character that uniquely identifies a
+cached item. Implementing libraries MUST support keys consisting of the
+characters <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code>, and <code>.</code> in any order in UTF-8 encoding and a
+length of up to 64 characters. Implementing libraries MAY support additional
+characters and encodings or longer lengths, but must support at least that
+minimum.  Libraries are responsible for their own escaping of key strings
+as appropriate, but MUST be able to return the original unmodified key string.
+The following characters are reserved for future extensions and MUST NOT be
+supported by implementing libraries: <code>{}()/\@:</code></p>
+</li>
+<li>
+<p><strong>Hit</strong> - A cache hit occurs when a Calling Library requests an Item by key
+and a matching value is found for that key, and that value has not expired, and
+the value is not invalid for some other reason. Calling Libraries SHOULD make
+sure to verify isHit() on all get() calls.</p>
+</li>
+<li>
+<p><strong>Miss</strong> - A cache miss is the opposite of a cache hit. A cache miss occurs
+when a Calling Library requests an item by key and that value not found for that
+key, or the value was found but has expired, or the value is invalid for some
+other reason. An expired value MUST always be considered a cache miss.</p>
+</li>
+<li>
+<p><strong>Deferred</strong> - A deferred cache save indicates that a cache item may not be
+persisted immediately by the pool. A Pool object MAY delay persisting a deferred
+cache item in order to take advantage of bulk-set operations supported by some
+storage engines. A Pool MUST ensure that any deferred cache items are eventually
+persisted and data is not lost, and MAY persist them before a Calling Library
+requests that they be persisted. When a Calling Library invokes the commit()
+method all outstanding deferred items MUST be persisted. An Implementing Library
+MAY use whatever logic is appropriate to determine when to persist deferred
+items, such as an object destructor, persisting all on save(), a timeout or
+max-items check or any other appropriate logic. Requests for a cache item that
+has been deferred MUST return the deferred but not-yet-persisted item.</p>
+</li>
+</ul>
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<p>Implementing libraries MUST support all serializable PHP data types, including:</p>
+<ul>
+<li><strong>Strings</strong> - Character strings of arbitrary size in any PHP-compatible encoding.</li>
+<li><strong>Integers</strong> - All integers of any size supported by PHP, up to 64-bit signed.</li>
+<li><strong>Floats</strong> - All signed floating point values.</li>
+<li><strong>Boolean</strong> - True and False.</li>
+<li><strong>Null</strong> - The actual null value.</li>
+<li><strong>Arrays</strong> - Indexed, associative and multidimensional arrays of arbitrary depth.</li>
+<li><strong>Object</strong> - Any object that supports lossless serialization and
+deserialization such that $o == unserialize(serialize($o)). Objects MAY
+leverage PHP's Serializable interface, <code>__sleep()</code> or <code>__wakeup()</code> magic methods,
+or similar language functionality if appropriate.</li>
+</ul>
+<p>All data passed into the Implementing Library MUST be returned exactly as
+passed. That includes the variable type. That is, it is an error to return
+(string) 5 if (int) 5 was the value saved.  Implementing Libraries MAY use PHP's
+serialize()/unserialize() functions internally but are not required to do so.
+Compatibility with them is simply used as a baseline for acceptable object values.</p>
+<p>If it is not possible to return the exact saved value for any reason, implementing
+libraries MUST respond with a cache miss rather than corrupted data.</p>
+<h2 id="key-concepts">Key Concepts<a class="headerlink" href="#key-concepts" title="Permanent link">&para;</a></h2>
+<h3 id="pool">Pool<a class="headerlink" href="#pool" title="Permanent link">&para;</a></h3>
+<p>The Pool represents a collection of items in a caching system. The pool is
+a logical Repository of all items it contains.  All cacheable items are retrieved
+from the Pool as an Item object, and all interaction with the whole universe of
+cached objects happens through the Pool.</p>
+<h3 id="items">Items<a class="headerlink" href="#items" title="Permanent link">&para;</a></h3>
+<p>An Item represents a single key/value pair within a Pool. The key is the primary
+unique identifier for an Item and MUST be immutable. The Value MAY be changed
+at any time.</p>
+<h2 id="error-handling">Error handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
+<p>While caching is often an important part of application performance, it should never
+be a critical part of application functionality. Thus, an error in a cache system SHOULD NOT
+result in application failure.  For that reason, Implementing Libraries MUST NOT
+throw exceptions other than those defined by the interface, and SHOULD trap any errors
+or exceptions triggered by an underlying data store and not allow them to bubble.</p>
+<p>An Implementing Library SHOULD log such errors or otherwise report them to an
+administrator as appropriate.</p>
+<p>If a Calling Library requests that one or more Items be deleted, or that a pool be cleared,
+it MUST NOT be considered an error condition if the specified key does not exist. The
+post-condition is the same (the key does not exist, or the pool is empty), thus there is
+no error condition.</p>
+<h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
+<h3 id="cacheiteminterface">CacheItemInterface<a class="headerlink" href="#cacheiteminterface" title="Permanent link">&para;</a></h3>
+<p>CacheItemInterface defines an item inside a cache system.  Each Item object
+MUST be associated with a specific key, which can be set according to the
+implementing system and is typically passed by the Cache\CacheItemPoolInterface
+object.</p>
+<p>The Cache\CacheItemInterface object encapsulates the storage and retrieval of
+cache items. Each Cache\CacheItemInterface is generated by a
+Cache\CacheItemPoolInterface object, which is responsible for any required
+setup as well as associating the object with a unique Key.
+Cache\CacheItemInterface objects MUST be able to store and retrieve any type of
+PHP value defined in the Data section of this document.</p>
+<p>Calling Libraries MUST NOT instantiate Item objects themselves. They may only
+be requested from a Pool object via the getItem() method.  Calling Libraries
+SHOULD NOT assume that an Item created by one Implementing Library is
+compatible with a Pool from another Implementing Library.</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Cache</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * CacheItemInterface defines an interface for interacting with objects inside a cache.</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">CacheItemInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Returns the key for the current cache item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * The key is loaded by the Implementing Library, but should be available to</span>
+<span class="sd">     * the higher level callers when needed.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return string</span>
+<span class="sd">     *   The key string for this cache item.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getKey</span><span class="p">();</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Retrieves the value of the item from the cache associated with this object&#39;s key.</span>
+<span class="sd">     *</span>
+<span class="sd">     * The value returned must be identical to the value originally stored by set().</span>
+<span class="sd">     *</span>
+<span class="sd">     * If isHit() returns false, this method MUST return null. Note that null</span>
+<span class="sd">     * is a legitimate cached value, so the isHit() method SHOULD be used to</span>
+<span class="sd">     * differentiate between &quot;null value was found&quot; and &quot;no value was found.&quot;</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return mixed</span>
+<span class="sd">     *   The value corresponding to this cache item&#39;s key, or null if not found.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">get</span><span class="p">();</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Confirms if the cache item lookup resulted in a cache hit.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Note: This method MUST NOT have a race condition between calling isHit()</span>
+<span class="sd">     * and calling get().</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if the request resulted in a cache hit. False otherwise.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">isHit</span><span class="p">();</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Sets the value represented by this cache item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * The $value argument may be any item that can be serialized by PHP,</span>
+<span class="sd">     * although the method of serialization is left up to the Implementing</span>
+<span class="sd">     * Library.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param mixed $value</span>
+<span class="sd">     *   The serializable value to be stored.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return static</span>
+<span class="sd">     *   The invoked object.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">set</span><span class="p">(</span><span class="nv">$value</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Sets the expiration time for this cache item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param \DateTimeInterface|null $expiration</span>
+<span class="sd">     *   The point in time after which the item MUST be considered expired.</span>
+<span class="sd">     *   If null is passed explicitly, a default value MAY be used. If none is set,</span>
+<span class="sd">     *   the value should be stored permanently or for as long as the</span>
+<span class="sd">     *   implementation allows.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return static</span>
+<span class="sd">     *   The called object.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">expiresAt</span><span class="p">(</span><span class="nv">$expiration</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Sets the expiration time for this cache item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param int|\DateInterval|null $time</span>
+<span class="sd">     *   The period of time from the present after which the item MUST be considered</span>
+<span class="sd">     *   expired. An integer parameter is understood to be the time in seconds until</span>
+<span class="sd">     *   expiration. If null is passed explicitly, a default value MAY be used.</span>
+<span class="sd">     *   If none is set, the value should be stored permanently or for as long as the</span>
+<span class="sd">     *   implementation allows.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return static</span>
+<span class="sd">     *   The called object.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">expiresAfter</span><span class="p">(</span><span class="nv">$time</span><span class="p">);</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="cacheitempoolinterface">CacheItemPoolInterface<a class="headerlink" href="#cacheitempoolinterface" title="Permanent link">&para;</a></h3>
+<p>The primary purpose of Cache\CacheItemPoolInterface is to accept a key from the
+Calling Library and return the associated Cache\CacheItemInterface object.
+It is also the primary point of interaction with the entire cache collection.
+All configuration and initialization of the Pool is left up to an Implementing
+Library.</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Cache</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * CacheItemPoolInterface generates CacheItemInterface objects.</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">CacheItemPoolInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * Returns a Cache Item representing the specified key.</span>
+<span class="sd">     *</span>
+<span class="sd">     * This method must always return a CacheItemInterface object, even in case of</span>
+<span class="sd">     * a cache miss. It MUST NOT return null.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $key</span>
+<span class="sd">     *   The key for which to return the corresponding Cache Item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @throws InvalidArgumentException</span>
+<span class="sd">     *   If the $key string is not a legal value a \Psr\Cache\InvalidArgumentException</span>
+<span class="sd">     *   MUST be thrown.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return CacheItemInterface</span>
+<span class="sd">     *   The corresponding Cache Item.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getItem</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Returns a traversable set of cache items.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string[] $keys</span>
+<span class="sd">     *   An indexed array of keys of items to retrieve.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @throws InvalidArgumentException</span>
+<span class="sd">     *   If any of the keys in $keys are not a legal value a \Psr\Cache\InvalidArgumentException</span>
+<span class="sd">     *   MUST be thrown.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return array|\Traversable</span>
+<span class="sd">     *   A traversable collection of Cache Items keyed by the cache keys of</span>
+<span class="sd">     *   each item. A Cache item will be returned for each key, even if that</span>
+<span class="sd">     *   key is not found. However, if no keys are specified then an empty</span>
+<span class="sd">     *   traversable MUST be returned instead.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getItems</span><span class="p">(</span><span class="k">array</span> <span class="nv">$keys</span> <span class="o">=</span> <span class="k">array</span><span class="p">());</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Confirms if the cache contains specified cache item.</span>
+<span class="sd">     *</span>
+<span class="sd">     * Note: This method MAY avoid retrieving the cached value for performance reasons.</span>
+<span class="sd">     * This could result in a race condition with CacheItemInterface::get(). To avoid</span>
+<span class="sd">     * such situation use CacheItemInterface::isHit() instead.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $key</span>
+<span class="sd">     *   The key for which to check existence.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @throws InvalidArgumentException</span>
+<span class="sd">     *   If the $key string is not a legal value a \Psr\Cache\InvalidArgumentException</span>
+<span class="sd">     *   MUST be thrown.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if item exists in the cache, false otherwise.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">hasItem</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Deletes all items in the pool.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if the pool was successfully cleared. False if there was an error.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">clear</span><span class="p">();</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Removes the item from the pool.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string $key</span>
+<span class="sd">     *   The key to delete.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @throws InvalidArgumentException</span>
+<span class="sd">     *   If the $key string is not a legal value a \Psr\Cache\InvalidArgumentException</span>
+<span class="sd">     *   MUST be thrown.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if the item was successfully removed. False if there was an error.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deleteItem</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Removes multiple items from the pool.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param string[] $keys</span>
+<span class="sd">     *   An array of keys that should be removed from the pool.</span>
+
+<span class="sd">     * @throws InvalidArgumentException</span>
+<span class="sd">     *   If any of the keys in $keys are not a legal value a \Psr\Cache\InvalidArgumentException</span>
+<span class="sd">     *   MUST be thrown.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if the items were successfully removed. False if there was an error.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">deleteItems</span><span class="p">(</span><span class="k">array</span> <span class="nv">$keys</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Persists a cache item immediately.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param CacheItemInterface $item</span>
+<span class="sd">     *   The cache item to save.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if the item was successfully persisted. False if there was an error.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">save</span><span class="p">(</span><span class="nx">CacheItemInterface</span> <span class="nv">$item</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Sets a cache item to be persisted later.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @param CacheItemInterface $item</span>
+<span class="sd">     *   The cache item to save.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   False if the item could not be queued or if a commit was attempted and failed. True otherwise.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">saveDeferred</span><span class="p">(</span><span class="nx">CacheItemInterface</span> <span class="nv">$item</span><span class="p">);</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * Persists any deferred cache items.</span>
+<span class="sd">     *</span>
+<span class="sd">     * @return bool</span>
+<span class="sd">     *   True if all not-yet-saved items were successfully saved or there were none. False otherwise.</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">commit</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="cacheexception">CacheException<a class="headerlink" href="#cacheexception" title="Permanent link">&para;</a></h3>
+<p>This exception interface is intended for use when critical errors occur,
+including but not limited to <em>cache setup</em> such as connecting to a cache server
+or invalid credentials supplied.</p>
+<p>Any exception thrown by an Implementing Library MUST implement this interface.</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Cache</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Exception interface for all exceptions thrown by an Implementing Library.</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">CacheException</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="invalidargumentexception">InvalidArgumentException<a class="headerlink" href="#invalidargumentexception" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="k">namespace</span> <span class="nx">Psr\Cache</span><span class="p">;</span>
+
+<span class="sd">/**</span>
+<span class="sd"> * Exception interface for invalid cache arguments.</span>
+<span class="sd"> *</span>
+<span class="sd"> * Any time an invalid argument is passed into a method it must throw an</span>
+<span class="sd"> * exception class which implements Psr\Cache\InvalidArgumentException.</span>
+<span class="sd"> */</span>
+<span class="k">interface</span> <span class="nx">InvalidArgumentException</span> <span class="k">extends</span> <span class="nx">CacheException</span>
+<span class="p">{</span>
+<span class="p">}</span>
+</pre></div>
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../php-autoloader/" title="Autoloader" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Autoloader
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../php-http-messages/" title="HTTP Messages" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                HTTP Messages
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2017 Venngage
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/Venngage" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/Venngage" class="md-footer-social__link fa fa-twitter"></a>
+    
+      <a href="https://www.linkedin.com/company/venngage" class="md-footer-social__link fa fa-linkedin"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-2afe21e0b2.js"></script>
+      <script>var config={url:{base:"../.."}},app=new Application(config);app.initialize()</script>
+      
+    
+    
+      
+      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-XXXXXXXX-X","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+      
+    
+  </body>
+</html>
